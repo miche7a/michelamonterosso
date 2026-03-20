@@ -27,8 +27,6 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ─── CREATURE ─── */
@@ -183,7 +181,6 @@ nav {
   }
   .index-row:hover::after { opacity: 1; }
 }
-
 .index-row > * {
   position: relative;
   z-index: 1;
@@ -296,7 +293,6 @@ nav {
 
 /* ─── FOOTER ─── */
 footer {
-  margin-top: auto;
   padding: 1.4rem 2.4rem;
   display: flex;
   justify-content: space-between;
@@ -356,30 +352,55 @@ footer {
   .intro-body { font-size: 0.9rem; }
 }
 
-
+/* ─── ASCII LOADER ─── */
+#ascii-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+#ascii-loader.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#ascii-bar {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
+<!-- ASCII Loader -->
+<div id="ascii-loader"><span id="ascii-bar"></span></div>
+
 
 <!-- ─── NAV ─── -->
 <nav>
-  <button class="nav-name" onclick="showPage('experiences')">Michela Monterosso</button>
+  <button class="nav-name" onclick="showPage('experience')">Michela Monterosso</button>
   <div class="nav-links">
-    <button class="nav-link active" id="nav-experiences" onclick="showPage('experiences')">Experience</button>
+    <button class="nav-link active" id="nav-experience" onclick="showPage('experience')">Experience</button>
     <button class="nav-link" id="nav-about" onclick="showPage('about')">About</button>
   </div>
 </nav>
 
 
-<!-- ══════════════════ PAGE: EXPERIENCES ══════════════════ -->
-<div class="page active" id="page-experiences">
+<!-- ══════════════════ PAGE: experience ══════════════════ -->
+<div class="page active" id="page-experience">
   <div class="container">
 
     <div class="intro">
       <p class="intro-eyebrow">UX &amp; Product Design</p>
       <p class="intro-body">
-        A selection of product and interaction design work —
-        research-led, human-centred, and built to last.
+        A selection of roles I held and projects I had the pleasure to work with.
       </p>
     </div>
 
@@ -391,52 +412,52 @@ footer {
         <span class="index-col">Year</span>
       </div>
 
-      <a class="index-row" href="#">
+      <a class="index-row" href="project-partsradet/index.html" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
         <span class="row-num">01</span>
-        <span class="row-title">Project Title One</span>
-        <span class="row-type">App Design</span>
-        <span class="row-year">2025</span>
+        <span class="row-title">A governamental challenge</span>
+        <span class="row-type">UX strategy/Web desing</span>
+        <span class="row-year">2018</span>
       </a>
 
-      <a class="index-row" href="#">
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
         <span class="row-num">02</span>
-        <span class="row-title">Project Title Two</span>
-        <span class="row-type">Design System</span>
+        <span class="row-title">Top delivery consumer app</span>
+        <span class="row-type">Product design</span>
         <span class="row-year">2024</span>
       </a>
 
-      <a class="index-row" href="#">
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
         <span class="row-num">03</span>
-        <span class="row-title">Project Title Three</span>
-        <span class="row-type">End-to-End UX</span>
+        <span class="row-title">Digitising sales rep</span>
+        <span class="row-type">Discovery UX</span>
+        <span class="row-year">2019</span>
+      </a>
+
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+        <span class="row-num">04</span>
+        <span class="row-title">Total app experience rehaul</span>
+        <span class="row-type">UX strategy/Product design</span>
+        <span class="row-year">2023</span>
+      </a>
+
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+        <span class="row-num">05</span>
+        <span class="row-title">Reviving reading</span>
+        <span class="row-type">Discovery UX</span>
         <span class="row-year">2024</span>
       </a>
 
-      <a class="index-row" href="#">
-        <span class="row-num">04</span>
-        <span class="row-title">Project Title Four</span>
-        <span class="row-type">User Research</span>
-        <span class="row-year">2023</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">05</span>
-        <span class="row-title">Project Title Five</span>
-        <span class="row-type">Interaction Design</span>
-        <span class="row-year">2023</span>
-      </a>
-
-      <a class="index-row" href="#">
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
         <span class="row-num">06</span>
-        <span class="row-title">Project Title Six</span>
-        <span class="row-type">Product Strategy</span>
+        <span class="row-title">An edge that can save lives</span>
+        <span class="row-type">Discover/Define UX</span>
         <span class="row-year">2022</span>
       </a>
 
-      <a class="index-row" href="#">
+      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
         <span class="row-num">07</span>
-        <span class="row-title">Project Title Seven</span>
-        <span class="row-type">Prototype &amp; Test</span>
+        <span class="row-title">Elevating travel at sea</span>
+        <span class="row-type">Discover/Define UX</span>
         <span class="row-year">2022</span>
       </a>
 
@@ -658,6 +679,35 @@ footer {
     document.getElementById('nav-' + id).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
+
+
+
+  // ── ASCII LOADER ──
+  (function() {
+    var pat = '<:>:';
+    var LEN = 48;
+    var t = 0;
+    var raf;
+
+    function tick() {
+      t++;
+      var offset = Math.floor(t / 2) % pat.length;
+      var full = '';
+      for (var i = 0; i < LEN + pat.length; i++) full += pat[i % pat.length];
+      document.getElementById('ascii-bar').textContent = full.slice(offset, offset + LEN);
+      raf = requestAnimationFrame(tick);
+    }
+
+    window.showLoader = function(href) {
+      var loader = document.getElementById('ascii-loader');
+      loader.classList.add('active');
+      t = 0;
+      tick();
+      setTimeout(function() {
+        window.location.href = href;
+      }, 700);
+    };
+  })();
 
 </script>
 
