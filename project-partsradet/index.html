@@ -13,7 +13,7 @@
   --nav-h: 56px;
 }
 html { font-size: 15px; }
-body { background: var(--bg); color: var(--ink); font-family: var(--mono); font-weight: 300; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+body { background: var(--bg); color: var(--ink); font-family: var(--mono); font-weight: 300; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
 
 /* ─── NAV ─── */
 nav {
@@ -41,10 +41,19 @@ nav {
 
 /* ─── FOOTER ─── */
 footer {
+  margin-top: auto;
   padding: 1.4rem 2.4rem;
-  display: flex; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.footer-text { font-size: 0.70rem; letter-spacing: 0.08em; color: #6D6D6D; }
+.footer-text {
+  font-size: 0.70rem;
+  letter-spacing: 0.08em;
+  color: #6D6D6D;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -252,14 +261,6 @@ footer {
 .col-body ul li { margin-bottom: 0.3em; }
 
 /* ─── CREDITS BLOCK ─── */
-.credits {
-  border-top: 1px solid var(--faint);
-  padding: 3rem 0;
-  margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
 
 .credit-label {
   font-family: var(--mono);
@@ -283,37 +284,8 @@ footer {
 
 
 /* ─── CREDITS APPENDIX ─── */
-.credits-appendix {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
-.credits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.credit-label {
-  font-family: var(--mono);
-  font-size: 0.70rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #6D6D6D;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--faint);
-}
-.credit-value {
-  font-family: var(--mono);
-  font-size: 0.70rem;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--ink);
-}
 /* ─── PROJECT NAV (prev/next) ─── */
 .project-nav {
-  border-top: 1px solid var(--faint);
   padding: 2.5rem 0;
   display: flex;
   justify-content: flex-end;
@@ -361,6 +333,36 @@ footer {
   .project-meta  { gap: 1.5rem; }
 }
 
+
+/* ─── CREDITS APPENDIX ─── */
+.credits-appendix {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.credits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.credit-label {
+  font-family: var(--mono);
+  font-size: 0.70rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6D6D6D;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--faint);
+}
+.credit-value {
+  font-family: var(--mono);
+  font-size: 0.70rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--ink);
+}
 </style>
 </head>
 <body>
@@ -393,15 +395,15 @@ footer {
     <div class="project-meta">
       <div>
         <div class="meta-label">Type</div>
-        <div class="meta-value">App Design</div>
+        <div class="meta-value">End-to-End UX</div>
       </div>
       <div>
         <div class="meta-label">Client</div>
-        <div class="meta-value">Client Name</div>
+        <div class="meta-value">Partsrådet</div>
       </div>
       <div>
         <div class="meta-label">Year</div>
-        <div class="meta-value">2025</div>
+        <div class="meta-value">2024</div>
       </div>
     </div>
     <div class="content-full">
@@ -577,32 +579,33 @@ footer {
     </div>
   </div>
 
+  <!-- ─── APPENDIX: CREDITS ─── -->
+  <div class="credits-appendix">
+    <div class="credits">
+      <div>
+        <div class="credit-label">Deliverables</div>
+        <div class="credit-value">
+          Interviews synthesis<br>
+          Content strategy<br>
+          Sitemap<br>
+          Interaction design<br>
+          Component system
+        </div>
+      </div>
+      <div>
+        <div class="credit-label">Duration</div>
+        <div class="credit-value">5 months</div>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── NEXT PROJECT NAV ─── -->
   <div class="project-nav">
-    <a class="proj-nav-link" href="../project-02/index.html" onclick="if(this.href.indexOf('#')<0){event.preventDefault();showLoader(this.href)}">
+    <a class="proj-nav-link" href="../project-02/index.html">
       <span class="proj-nav-label">To 02</span>
       <span class="proj-nav-arrow">↳</span>
     </a>
   </div>
-  <!-- ─── APPENDIX: CREDITS ─── -->
-<div class="credits-appendix">
-  <div class="credits">
-    <div>
-      <div class="credit-label">Deliverables</div>
-      <div class="credit-value">
-        Interviews synthesis<br>
-        Content strategy<br>
-        Sitemap<br>
-        Interaction design<br>
-        Component system
-      </div>
-    </div>
-    <div>
-      <div class="credit-label">Duration</div>
-      <div class="credit-value">5 months</div>
-    </div>
-  </div>
-</div>
 
 </div>
 
