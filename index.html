@@ -27,6 +27,8 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ─── CREATURE ─── */
@@ -39,7 +41,7 @@ body {
 
 /* ─── PAGE SYSTEM ─── */
 .page { display: none; }
-.page.active { display: block; }
+.page.active { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* ─── NAV ─── */
 nav {
@@ -103,6 +105,8 @@ nav {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2.4rem;
+  flex: 1;
+  width: 100%;
 }
 
 /* ─── LANDING ─── */
@@ -293,6 +297,7 @@ nav {
 
 /* ─── FOOTER ─── */
 footer {
+  margin-top: auto;
   padding: 1.4rem 2.4rem;
   display: flex;
   justify-content: space-between;
@@ -351,37 +356,9 @@ footer {
   .intro { padding: 3rem 0 2.5rem; }
   .intro-body { font-size: 0.9rem; }
 }
-
-/* ─── ASCII LOADER ─── */
-#ascii-loader {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
-}
-#ascii-loader.active {
-  opacity: 1;
-  pointer-events: all;
-}
-#ascii-bar {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  color: var(--ink);
-  white-space: nowrap;
-}
 </style>
 </head>
 <body>
-<!-- ASCII Loader -->
-<div id="ascii-loader"><span id="ascii-bar"></span></div>
-
 
 <!-- ─── NAV ─── -->
 <nav>
@@ -412,53 +389,60 @@ footer {
         <span class="index-col">Year</span>
       </div>
 
-      <a class="index-row" href="project-partsradet/index.html" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="project-partsradet/index.html">
         <span class="row-num">01</span>
         <span class="row-title">A governamental challenge</span>
         <span class="row-type">Product design</span>
         <span class="row-year">2018</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">02</span>
         <span class="row-title">Top delivery consumer app</span>
         <span class="row-type">Product design</span>
         <span class="row-year">2024</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">03</span>
         <span class="row-title">Digitising sales rep</span>
         <span class="row-type">Discovery UX</span>
         <span class="row-year">2019</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">04</span>
         <span class="row-title">Total app experience rehaul</span>
         <span class="row-type">Product design</span>
         <span class="row-year">2023</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">05</span>
         <span class="row-title">Reviving reading</span>
         <span class="row-type">Discovery UX</span>
         <span class="row-year">2024</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">06</span>
         <span class="row-title">An edge that can save lives</span>
         <span class="row-type">Discover/Define UX</span>
         <span class="row-year">2022</span>
       </a>
 
-      <a class="index-row" href="#" onclick="if(this.href.slice(-1)!=='#'){event.preventDefault();showLoader(this.href)}">
+      <a class="index-row" href="#">
         <span class="row-num">07</span>
         <span class="row-title">Elevating travel at sea</span>
         <span class="row-type">Discover/Define UX</span>
         <span class="row-year">2022</span>
+      </a>
+
+      <a class="index-row" href="#">
+        <span class="row-num">08</span>
+        <span class="row-title">On being manager and team lead</span>
+        <span class="row-type">Responsibilities</span>
+        <span class="row-year">2025</span>
       </a>
 
     </div>
@@ -679,36 +663,6 @@ footer {
     document.getElementById('nav-' + id).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
-
-
-
-  // ── ASCII LOADER ──
-  (function() {
-    var pat = '<:>:';
-    var LEN = 48;
-    var t = 0;
-    var raf;
-
-    function tick() {
-      t++;
-      var offset = Math.floor(t / 2) % pat.length;
-      var full = '';
-      for (var i = 0; i < LEN + pat.length; i++) full += pat[i % pat.length];
-      document.getElementById('ascii-bar').textContent = full.slice(offset, offset + LEN);
-      raf = requestAnimationFrame(tick);
-    }
-
-    window.showLoader = function(href) {
-      var loader = document.getElementById('ascii-loader');
-      loader.classList.add('active');
-      t = 0;
-      tick();
-      setTimeout(function() {
-        window.location.href = href;
-      }, 700);
-    };
-  })();
-
 </script>
 
 </body>
