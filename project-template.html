@@ -41,11 +41,19 @@ nav {
 
 /* ─── FOOTER ─── */
 footer {
-  border-top: 1px solid var(--faint);
+  margin-top: auto;
   padding: 1.4rem 2.4rem;
-  display: flex; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.footer-text { font-size: 0.70rem; letter-spacing: 0.08em; color: #6D6D6D; }
+.footer-text {
+  font-size: 0.70rem;
+  letter-spacing: 0.08em;
+  color: #6D6D6D;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -333,17 +341,7 @@ footer {
 }
 .project-header, .block, .credits { animation: fadeUp 0.35s ease both; }
 
-/* ─── ASCII LOADER ─── */
-#ascii-loader {
-  position: fixed; inset: 0; background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.15s ease;
-}
-#ascii-loader.active { opacity: 1; pointer-events: all; }
-#ascii-bar {
-  font-family: var(--mono); font-size: 0.75rem;
-  letter-spacing: 0.12em; color: var(--ink); white-space: nowrap;
-}
+
 
 /* ─── MOBILE ─── */
 @media (max-width: 640px) {
@@ -359,9 +357,6 @@ footer {
 </style>
 </head>
 <body>
-
-<!-- ASCII Loader -->
-<div id="ascii-loader"><span id="ascii-bar"></span></div>
 
 <!-- ─── NAV ─── -->
 <nav>
@@ -589,7 +584,7 @@ footer {
 
 <!-- ─── NEXT PROJECT NAV ─── -->
   <div class="project-nav">
-    <a class="proj-nav-link" href="../project-02/index.html" onclick="if(this.href.indexOf('#')<0){event.preventDefault();showLoader(this.href)}">
+    <a class="proj-nav-link" href="../project-02/index.html">
       <span class="proj-nav-label">To 02</span>
       <span class="proj-nav-arrow">↳</span>
     </a>
@@ -651,25 +646,6 @@ footer {
       img.src = img.dataset.on;
     }
   }
-
-  // ── ASCII LOADER ──
-  (function() {
-    var pat = '<:>:'; var LEN = 48; var t = 0; var raf;
-    function tick() {
-      t++;
-      var offset = Math.floor(t / 2) % pat.length;
-      var full = '';
-      for (var i = 0; i < LEN + pat.length; i++) full += pat[i % pat.length];
-      document.getElementById('ascii-bar').textContent = full.slice(offset, offset + LEN);
-      raf = requestAnimationFrame(tick);
-    }
-    window.showLoader = function(href) {
-      var loader = document.getElementById('ascii-loader');
-      loader.classList.add('active');
-      t = 0; tick();
-      setTimeout(function() { window.location.href = href; }, 700);
-    };
-  })();
 </script>
 
 </body>
