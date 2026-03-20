@@ -284,15 +284,32 @@ footer {
 
 /* ─── CREDITS APPENDIX ─── */
 .credits-appendix {
-  border-top: 1px solid var(--faint);
   margin-top: 4rem;
   padding-top: 2rem;
   padding-bottom: 4rem;
 }
-.credits-appendix .credits {
-  border-top: none;
-  margin-top: 0;
-  padding-top: 0;
+.credits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.credit-label {
+  font-family: var(--mono);
+  font-size: 0.70rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6D6D6D;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--faint);
+}
+.credit-value {
+  font-family: var(--mono);
+  font-size: 0.70rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--ink);
 }
 /* ─── PROJECT NAV (prev/next) ─── */
 .project-nav {
@@ -567,6 +584,25 @@ footer {
       <span class="proj-nav-arrow">↳</span>
     </a>
   </div>
+  <!-- ─── APPENDIX: CREDITS ─── -->
+<div class="credits-appendix">
+  <div class="credits">
+    <div>
+      <div class="credit-label">Deliverables</div>
+      <div class="credit-value">
+        Interviews synthesis<br>
+        Content strategy<br>
+        Sitemap<br>
+        Interaction design<br>
+        Component system
+      </div>
+    </div>
+    <div>
+      <div class="credit-label">Duration</div>
+      <div class="credit-value">5 months</div>
+    </div>
+  </div>
+</div>
 
 </div>
 
