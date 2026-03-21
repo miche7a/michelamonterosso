@@ -40,15 +40,15 @@
     <div class="project-meta">
       <div>
         <div class="meta-label">Type</div>
-        <div class="meta-value">End-to-End UX</div>
+        <div class="meta-value" id="meta-type">End-to-End UX</div>
       </div>
       <div>
         <div class="meta-label">Client</div>
-        <div class="meta-value">Partsrådet</div>
+        <div class="meta-value" id="meta-client">Partsrådet</div>
       </div>
       <div>
         <div class="meta-label">Year</div>
-        <div class="meta-value">2024</div>
+        <div class="meta-value" id="meta-year">2024</div>
       </div>
     </div>
     <div class="content-full">
@@ -260,7 +260,10 @@
   <span class="footer-text">© 2025</span>
 </footer>
 
+
+<script src="../projects.js"></script>
 <script src="../script.js"></script>
+<script>injectProjectMeta("project-partsradet");</script>
 
 
 
