@@ -4,176 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Michela Monterosso</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap">
+<meta name="description" content="Senior UX Designer based in Stockholm. Research-led, human-centred design across product, strategy and interaction.">
+<meta property="og:title" content="About — Michela Monterosso">
+<meta property="og:description" content="Senior UX Designer based in Stockholm. Research-led, human-centred design across product, strategy and interaction.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miche7a.github.io/michelamonterosso/about.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About — Michela Monterosso">
+<meta name="twitter:description" content="Senior UX Designer based in Stockholm. Research-led, human-centred design across product, strategy and interaction.">
+<link rel="stylesheet" href="style.css">
 <style>
-:root {
-  --bg: #EDEDED; --ink: #111110; --mid: #1E1EFF; --faint: #e8e7e2;
-  --muted: #6D6D6D; --dim: #555555;
-  --serif: 'Inter', sans-serif;
-  --mono: 'DM Mono', 'Courier New', monospace;
-  --text-sm: 0.82rem; --text-base: 0.90rem; --text-md: 1.00rem;
-  --text-lg: 1.05rem; --text-xl: 1.50rem; --text-2xl: 2.40rem;
-  --text-meta: 0.68rem;
-  --tracking-tight: 0.01em; --tracking-normal: 0.06em;
-  --tracking-wider: 0.13em; --tracking-widest: 0.15em; --tracking-label: 0.14em;
-  --leading-tight: 1.2; --leading-normal: 1.75;
-  --leading-relaxed: 1.8; --leading-loose: 1.85;
-  --divider: 1px solid #e8e7e2;
-  --nav-h: 56px; --container-w: 900px; --page-px: 2.4rem;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 15px; }
-body {
-  background: var(--bg); color: var(--ink);
-  font-family: var(--mono); font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh; display: flex; flex-direction: column;
-}
-nav {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--bg); height: var(--nav-h);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 var(--page-px); border-bottom: var(--divider);
-}
-.nav-name {
-  font-family: var(--serif); font-size: var(--text-lg); font-weight: 400;
-  letter-spacing: var(--tracking-tight); color: var(--ink); text-decoration: none;
-}
-.nav-links { display: flex; gap: 2rem; }
-.nav-link {
-  font-size: var(--text-sm); font-family: var(--mono); font-weight: 400;
-  letter-spacing: var(--tracking-wider); text-transform: uppercase;
-  color: var(--ink); text-decoration: none;
-}
-.nav-link.active { color: var(--mid); }
-.container {
-  max-width: var(--container-w);
-  margin: 0 auto; padding: 0 var(--page-px); flex: 1;
-}
-.about-top {
-  padding: 4.5rem 0 3rem;
-  margin-bottom: 3rem;
-}
-.about-eyebrow {
-  font-size: var(--text-sm); letter-spacing: var(--tracking-widest);
-  text-transform: uppercase; color: var(--mid); margin-bottom: 1.4rem;
-}
-.about-name {
-  font-family: var(--serif); font-size: var(--text-2xl); font-weight: 400;
-  line-height: var(--leading-tight); margin-bottom: 2rem;
-}
-.about-bio {
-  font-family: var(--serif); font-size: var(--text-lg);
-  line-height: var(--leading-normal); color: var(--dim);
-}
+html, body { overflow-x: hidden; }
+.about-top { padding: 4.5rem 0 3rem; margin-bottom: 3rem; }
+.about-bio { font-family: var(--serif); font-size: var(--text-lg); line-height: var(--leading-normal); color: var(--dim); }
 .about-bio + .about-bio { margin-top: 1.2em; }
-.sw-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0 4rem; margin-top: 2.5rem;
-}
+.about-bottom { padding-bottom: 6rem; }
+.about-divider { text-align: center; font-family: var(--mono); font-size: var(--text-md); font-weight: 400; color: var(--ink); letter-spacing: 0.2em; margin-bottom: 3rem; overflow: hidden; }
+.about-block { margin-bottom: 2.8rem; }
+.about-block-label { font-size: var(--text-md); letter-spacing: var(--tracking-normal); text-transform: uppercase; color: var(--ink); font-family: var(--mono); font-weight: 400; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: var(--divider); display: flex; align-items: center; gap: 7px; }
+.about-block-content { font-family: var(--serif); font-size: var(--text-base); line-height: var(--leading-normal); color: var(--ink); padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: var(--divider); }
+.about-block-content:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.about-meta { font-size: var(--text-sm); font-family: var(--mono); color: var(--mid); letter-spacing: var(--tracking-normal); display: block; margin-top: 0.15rem; }
+.about-responsibilities { font-family: var(--serif); font-size: var(--text-base); font-weight: 300; line-height: var(--leading-relaxed); color: var(--dim); margin-top: 0.6rem; }
+.contact-link { display: block; font-family: var(--serif); font-size: var(--text-md); color: var(--ink); text-decoration: none; padding: 0.7rem 0; border-bottom: var(--divider); }
+.contact-link:first-of-type { border-top: none; }
+.contact-label { font-family: var(--mono); font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 0.1rem; }
+.sw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 2.5rem; }
 .sw-accordion { border-top: var(--divider); }
-.sw-accordion-trigger {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0.8rem 0; cursor: pointer; user-select: none;
-  border: none; background: none; width: 100%; text-align: left;
-}
+.sw-accordion-trigger { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; cursor: pointer; user-select: none; border: none; background: none; width: 100%; text-align: left; }
 .sw-accordion-trigger:hover .sw-cat { color: var(--mid); }
 .sw-accordion-body { display: none; padding-top: 1rem; padding-bottom: 1rem; }
 .sw-accordion.is-open .sw-accordion-body { display: block; }
-.about-divider {
-  text-align: center;
-  font-family: var(--mono);
-  font-size: var(--text-md);
-  font-weight: 400;
-  color: var(--ink);
-  letter-spacing: 0.2em;
-  margin-bottom: 3rem;
-}
-.about-block { margin-bottom: 2.8rem; }
-.about-block-label {
-  font-size: var(--text-md); letter-spacing: var(--tracking-normal);
-  text-transform: uppercase; color: var(--ink); font-family: var(--mono); font-weight: 400;
-  margin-bottom: 0.6rem; padding-bottom: 0.5rem;
-  border-bottom: var(--divider); display: flex; align-items: center; gap: 7px;
-}
-.about-block-content {
-  font-family: var(--serif); font-size: var(--text-base);
-  line-height: var(--leading-normal); color: var(--ink);
-  padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: var(--divider);
-}
-.about-block-content:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.about-meta {
-  font-size: var(--text-sm); font-family: var(--mono); color: var(--mid);
-  letter-spacing: var(--tracking-normal); display: block; margin-top: 0.15rem;
-}
-.about-responsibilities {
-  font-family: var(--serif); font-size: var(--text-base); font-weight: 300;
-  line-height: var(--leading-relaxed); color: var(--dim); margin-top: 0.6rem;
-}
-.contact-link {
-  display: block; font-family: var(--serif); font-size: var(--text-md);
-  color: var(--ink); text-decoration: none; padding: 0.7rem 0; border-bottom: var(--divider);
-}
-.contact-link:first-of-type { border-top: none; }
-.contact-label {
-  font-family: var(--mono); font-size: var(--text-sm); letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 0.1rem;
-}
-.sw-cat-row {
-  display: flex; align-items: center; gap: 8px;
-  margin-top: 2.5rem; margin-bottom: 0.9rem;
-  padding-bottom: 0.4rem; border-bottom: var(--divider);
-}
-.sw-cat {
-  font-family: var(--mono); font-size: var(--text-sm); font-weight: 400;
-  letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink);
-}
-.sw-arrow {
-  font-size: var(--text-sm); color: var(--mid); line-height: 1;
-  display: inline-block; flex-shrink: 0;
-}
+.sw-cat { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink); }
+.sw-arrow { font-size: var(--text-sm); color: var(--mid); line-height: 1; display: inline-block; flex-shrink: 0; }
 .sw-accordion.is-open .sw-arrow { color: var(--ink); }
 .sw-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
-.sw-dot {
-  width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
-  border-radius: 2px; display: flex; align-items: center; justify-content: center;
-}
+.sw-dot { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; border-radius: 2px; display: flex; align-items: center; justify-content: center; }
 .sw-dot.s { background: #d8d7d3; }
 .sw-dot.w { background: #d8d7d3; }
 .sw-dot svg { width: 10px; height: 10px; }
-.sw-title {
-  font-family: var(--mono); font-size: 0.82rem; font-weight: 400;
-  color: var(--ink); display: block; margin-bottom: 2px; letter-spacing: var(--tracking-normal);
-}
-.sw-sub {
-  font-family: var(--mono); font-size: 0.82rem; font-weight: 300;
-  color: var(--dim); display: block; line-height: var(--leading-normal);
-}
-.languages-grid { display: flex; flex-direction: column; }
-.lang-item {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 0.5rem 0; border-bottom: var(--divider);
-}
-.lang-item:last-child { border-bottom: none; }
-.lang-name {
-  font-family: var(--mono); font-size: var(--text-sm); font-weight: 400;
-  color: var(--ink); letter-spacing: var(--tracking-normal);
-}
-.lang-level {
-  font-family: var(--mono); font-size: var(--text-sm); font-weight: 300;
-  color: var(--mid); letter-spacing: var(--tracking-normal);
-}
-footer {
-  margin-top: auto; padding: 1.4rem var(--page-px);
-  display: flex; align-items: center; justify-content: space-between;
-  border-top: var(--divider);
-}
-.footer-text { font-size: var(--text-sm); letter-spacing: 0.08em; color: var(--muted); }
+.sw-title { font-family: var(--mono); font-size: 0.82rem; font-weight: 400; color: var(--ink); display: block; margin-bottom: 2px; letter-spacing: var(--tracking-normal); }
+.sw-sub { font-family: var(--mono); font-size: 0.82rem; font-weight: 300; color: var(--dim); display: block; line-height: var(--leading-normal); }
 @media (max-width: 640px) {
-  :root { --page-px: 1.2rem; --text-sm: 0.82rem; }
+  html, body, .container { overflow-x: hidden; }
   .about-top { padding: 1.2rem 0 1rem; margin-bottom: 1rem; }
-  .about-name { font-size: var(--text-xl); }
   .sw-grid { grid-template-columns: 1fr; gap: 0; }
+  .about-divider { font-size: var(--text-sm); white-space: nowrap; overflow: hidden; }
 }
 </style>
 </head>
@@ -190,7 +66,6 @@ footer {
 <div class="container">
 
   <div class="about-top">
-    <h1 class="about-name">Michela<br>Monterosso</h1>
     <p class="about-bio">I'm a Senior UX Designer based in Stockholm with 10+ years of experience across branding, interaction design, and product strategy. I started as a graphic designer in Tokyo, retrained through Hyper Island, and have been leading UX work since.</p>
     <p class="about-bio">My practice is research-led and human-centred — I care about the problem behind the problem, ask a lot of WHYs, and bring a cross-disciplinary perspective shaped by working across cultures, industries, and time zones.</p>
     <p class="about-bio">Currently open to new opportunities.</p>
@@ -200,7 +75,7 @@ footer {
       <div class="sw-accordion" id="acc-strengths">
         <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-strengths')">
           <span class="sw-cat">My strengths</span>
-          <span class="sw-arrow">●</span>
+          <span class="sw-arrow">&#9679;</span>
         </button>
         <div class="sw-accordion-body">
           <div class="sw-item">
@@ -221,7 +96,7 @@ footer {
       <div class="sw-accordion" id="acc-notes">
         <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-notes')">
           <span class="sw-cat">My honest notes</span>
-          <span class="sw-arrow">●</span>
+          <span class="sw-arrow">&#9679;</span>
         </button>
         <div class="sw-accordion-body">
           <div class="sw-item">
@@ -244,7 +119,7 @@ footer {
 
   <div class="about-bottom">
 
-    <div class="about-divider">⊹˚₊‧────────────────────────‧₊˚⊹</div>
+    <div class="about-divider">&#x22B9;&#x02DA;&#x208A;&#x2027;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2027;&#x208A;&#x02DA;&#x22B9;</div>
 
     <div class="about-block">
       <p class="about-block-label">Experience</p>
@@ -259,7 +134,7 @@ footer {
     <div class="about-block">
       <p class="about-block-label">Education</p>
       <div class="about-block-content">Design Lead — Hyper Island<span class="about-meta">2018 – 2019</span></div>
-      <div class="about-block-content">Graphic Design — Istituto Europeo di Design<span class="about-meta">2008 – 2011 · incl. one year at IED Barcelona</span></div>
+      <div class="about-block-content">Graphic Design — Istituto Europeo di Design<span class="about-meta">2008 – 2011</span></div>
       <div class="about-block-content">BA Japanese Studies — SOAS, University of London<span class="about-meta">2003 – 2007</span></div>
     </div>
 
@@ -278,9 +153,11 @@ footer {
 
 <footer>
   <span class="footer-text">Michela Monterosso</span>
+  <div id="footer-creature-stage"></div>
   <span class="footer-text">&copy; 2025</span>
 </footer>
 
+<script src="script.js"></script>
 <script>
 function toggleAccordion(id) {
   document.getElementById(id).classList.toggle('is-open');
