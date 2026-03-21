@@ -157,6 +157,8 @@
 </div>
 
 
+<script src="projects.js"></script>
+
 <script>
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      ASCII LOADER CONFIG — tweak here
@@ -284,27 +286,9 @@
     // ── ACCENT COLOUR (fixed electric blue) ──
   document.documentElement.style.setProperty('--mid', '#1E1EFF');
 
-
-  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     PROJECTS — edit order here, numbers update automatically
-     To reorder: move a line up or down
-     To add:     add a new object to the array
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-
   /* ── COLUMN VISIBILITY — set true/false to show/hide ── */
   var showType = true;
   var showYear = true;
-
-  var projects = [
-    { title: "A governmental challenge",       type: "UX Strategy / Web Design", year: 2018, href: "project-partsradet/index.html" },
-    { title: "Top delivery consumer app",      type: "Product Design",            year: 2024, href: "#" },
-    { title: "Digitising sales rep",           type: "Discovery UX",              year: 2019, href: "#" },
-    { title: "Total app experience rehaul",    type: "Product Design",            year: 2023, href: "#" },
-    { title: "Reviving reading",               type: "Discovery UX",              year: 2024, href: "#" },
-    { title: "An edge that can save lives",    type: "Discover / Define UX",      year: 2022, href: "#" },
-    { title: "Elevating travel at sea",        type: "Discover / Define UX",      year: 2022, href: "#" },
-    { title: "On being manager and team lead", type: "Responsibilities",           year: 2025, href: "#" },
-  ];
 
   function renderProjects() {
     var list = document.getElementById('project-list');
@@ -315,8 +299,8 @@
     if (cols[2]) cols[2].style.display = showType ? '' : 'none';
     if (cols[3]) cols[3].style.display = showYear ? '' : 'none';
 
-    list.innerHTML = projects.map(function(p, i) {
-      var num = String(i + 1).padStart(2, '0');
+    list.innerHTML = PROJECTS.map(function(p, i) {
+      var num  = String(i + 1).padStart(2, '0');
       var type = showType ? '<span class="row-type">' + p.type + '</span>' : '';
       var year = showYear ? '<span class="row-year">' + p.year + '</span>' : '';
       return [

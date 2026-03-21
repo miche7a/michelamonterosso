@@ -45,12 +45,16 @@
 
     <div class="project-meta">
       <div>
+        <div class="meta-label">Type</div>
+        <div class="meta-value" id="meta-type">Type</div>
+      </div>
+      <div>
         <div class="meta-label">Client</div>
-        <div class="meta-value">Client Name</div>
+        <div class="meta-value" id="meta-client">Client Name</div>
       </div>
       <div>
         <div class="meta-label">Year</div>
-        <div class="meta-value">2025</div>
+        <div class="meta-value" id="meta-year">2025</div>
       </div>
     </div>
 
@@ -284,7 +288,9 @@
   <span class="footer-text">© 2025</span>
 </footer>
 
+<script src="../projects.js"></script>
 <script src="../script.js"></script>
+<script>injectProjectMeta("project-SLUG"); /* ← replace with this project's slug */</script>
 
 </body>
 </html>

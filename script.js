@@ -1,4 +1,27 @@
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PROJECT META HELPER
+   Call this on any project page to auto-populate
+   type/client/year from projects.js:
+
+     injectProjectMeta('project-partsradet');
+
+   Requires: id="meta-type", id="meta-client", id="meta-year"
+   on the .meta-value elements in the HTML.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+function injectProjectMeta(slug) {
+  if (typeof PROJECTS === 'undefined') return;
+  var project = PROJECTS.find(function(p) { return p.slug === slug; });
+  if (!project) return;
+  var typeEl   = document.getElementById('meta-type');
+  var clientEl = document.getElementById('meta-client');
+  var yearEl   = document.getElementById('meta-year');
+  if (typeEl)   typeEl.textContent   = project.type;
+  if (clientEl) clientEl.textContent = project.client;
+  if (yearEl)   yearEl.textContent   = String(project.year);
+  document.title = project.title + ' — Michela Monterosso';
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    script.js — shared JS for all project pages
    Link from each project page:
    <script src="../script.js"></script>
