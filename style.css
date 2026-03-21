@@ -271,7 +271,7 @@ footer {
   font-size: var(--text-sm); letter-spacing: var(--tracking-widest);
   text-transform: uppercase; color: var(--mid); margin-bottom: 1.2rem;
 }
-.intro-body { font-family: var(--serif); font-size: var(--text-md); font-weight: 500; }
+.intro-body { font-family: var(--serif); font-size: var(--text-xl); font-weight: 500; }
 .intro-body em { font-style: italic; color: var(--mid); }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
