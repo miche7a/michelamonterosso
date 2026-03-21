@@ -440,7 +440,11 @@ footer {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PROJECT PAGE — CREDITS APPENDIX
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.credits-appendix { border-top: var(--divider); margin-top: var(--credits-top); padding-top: var(--credits-py); padding-bottom: var(--credits-py); }
+.credits-appendix {
+  margin-top: var(--credits-top);
+  padding-top: var(--credits-py);
+  padding-bottom: var(--credits-py);
+}
 .credits      { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--credits-gap); }
 .credit-label { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--muted); margin-bottom: var(--credits-label-gap); padding-bottom: 0.4rem; border-bottom: var(--divider); }
 .credit-value { font-family: var(--mono); font-size: var(--text-sm); font-weight: 300; line-height: var(--leading-relaxed); color: var(--ink); }
