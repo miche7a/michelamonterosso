@@ -325,7 +325,7 @@ footer {
   text-transform: uppercase; color: var(--mid);
   margin-bottom: var(--text-gap-sm); padding-bottom: 0.5rem; border-bottom: var(--divider);
 }
-.about-block-content { font-family: var(--serif); font-size: var(--text-md); line-height: var(--leading-loose); color: var(--ink); }
+.about-block-content { font-family: var(--mono); font-size: var(--text-md); line-height: var(--leading-loose); color: var(--muted); }
 .about-block-content + .about-block-content { margin-top: var(--space-about); }
 .about-meta { font-size: var(--text-meta); font-family: var(--mono); color: var(--mid); letter-spacing: var(--tracking-normal); display: block; margin-top: 0.15rem; }
 .languages-label { font-size: var(--text-sm); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--mid); padding-bottom: 0.5rem; border-bottom: var(--divider); margin-bottom: 0.9rem; display: block; }
