@@ -161,7 +161,8 @@
 html {
   font-size: 15px;
   scroll-behavior: smooth;
-  overflow-y: scroll; /* always show scrollbar — prevents layout shift when content height changes */
+  overflow-y: scroll;         /* always show scrollbar — prevents layout shift on toggle */
+  scrollbar-gutter: stable;   /* modern equivalent — reserves space for scrollbar even when not needed */
 }
 
 body {
