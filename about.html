@@ -14,36 +14,8 @@
 <meta name="twitter:description" content="Senior UX Designer based in Stockholm. Research-led, human-centred design across product, strategy and interaction.">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* ── Languages grid ── */
-  .languages-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.5rem 0;
-    border-bottom: var(--divider);
-  }
-  .lang-item:last-child {
-    border-bottom: none;
-  }
-  .lang-name {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 400;
-    color: var(--ink);
-    letter-spacing: var(--tracking-normal);
-  }
-  .lang-level {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 300;
-    color: var(--mid);
-    letter-spacing: var(--tracking-normal);
-  }
+
+  /* ── Experience entries ── */
   .about-block-content {
     padding-bottom: 1.4rem;
     margin-bottom: 1.4rem;
@@ -62,6 +34,95 @@
     color: var(--dim);
     margin-top: 0.6rem;
   }
+
+  /* ── Strengths / Weaknesses ── */
+  .sw-cat-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.4rem;
+    border-bottom: var(--divider);
+  }
+  .sw-cat {
+    font-family: var(--mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .sw-cat-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    opacity: 0.6;
+  }
+  .sw-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .sw-dot {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sw-dot.s { background: #e1f5ee; }
+  .sw-dot.w { background: #faeeda; }
+  .sw-dot svg { width: 10px; height: 10px; }
+  .sw-title {
+    font-family: var(--mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 2px;
+    letter-spacing: var(--tracking-normal);
+  }
+  .sw-sub {
+    font-family: var(--mono);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--dim);
+    display: block;
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ── Languages grid ── */
+  .languages-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    border-bottom: var(--divider);
+  }
+  .lang-item:last-child { border-bottom: none; }
+  .lang-name {
+    font-family: var(--mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: var(--tracking-normal);
+  }
+  .lang-level {
+    font-family: var(--mono);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--mid);
+    letter-spacing: var(--tracking-normal);
+  }
+
 </style>
 </head>
 <body>
@@ -78,7 +139,7 @@
 <div class="container">
   <div class="about-grid">
 
-    <!-- ─── LEFT: Bio ─── -->
+    <!-- ─── LEFT ─── -->
     <div class="about-left">
       <p class="about-eyebrow">About</p>
       <h1 class="about-name">Michela<br>Monterosso</h1>
@@ -98,9 +159,83 @@
         Currently open to new opportunities.
       </p>
 
-    </div>
+      <!-- ─── Strengths / Weaknesses ─── -->
+      <div style="margin-top: 2.5rem;">
 
-    <!-- ─── RIGHT: Meta ─── -->
+        <div class="sw-cat-row">
+          <!-- Replace src with your hosted sword icon e.g. images/icon-sword.png -->
+          <!-- <img class="sw-cat-icon" src="images/icon-sword.png" alt=""> -->
+          <span class="sw-cat">Strengths</span>
+        </div>
+
+        <div class="sw-item">
+          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <span class="sw-title">Chaos to structure</span>
+            <span class="sw-sub">Thrives on complexity — tangled flows, edge cases, competing constraints — and maps them into something plannable and clear.</span>
+          </div>
+        </div>
+
+        <div class="sw-item">
+          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <span class="sw-title">People to outcomes</span>
+            <span class="sw-sub">Brings designers, developers, and stakeholders together — facilitates, synthesises, and turns it into concrete features and milestones.</span>
+          </div>
+        </div>
+
+        <div class="sw-item">
+          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <span class="sw-title">Reliable by default</span>
+            <span class="sw-sub">Consistently fast, consistently high quality, and always straight about risks and limits. Teams know what they're getting.</span>
+          </div>
+        </div>
+
+        <div class="sw-item">
+          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <span class="sw-title">Deep domain empathy</span>
+            <span class="sw-sub">Gets genuinely immersed in any field — editorial, nautical, construction — and designs from the inside out.</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <div class="sw-cat-row">
+            <!-- Replace src with your hosted shield icon e.g. images/icon-shield.png -->
+            <!-- <img class="sw-cat-icon" src="images/icon-shield.png" alt=""> -->
+            <span class="sw-cat">Weaknesses</span>
+          </div>
+
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
+            <div>
+              <span class="sw-title">Design system libraries</span>
+              <span class="sw-sub">Building complex component libraries with deep variants and tokens — I understand the logic, I've worked with brand systems for years, but it's not the kind of execution work I'm looking for.</span>
+            </div>
+          </div>
+
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
+            <div>
+              <span class="sw-title">Staying creative under pressure</span>
+              <span class="sw-sub">When stress spikes, I default to pragmatism. Learning to protect creative space even in crunch.</span>
+            </div>
+          </div>
+
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
+            <div>
+              <span class="sw-title">Deadline anxiety</span>
+              <span class="sw-sub">Sustained time pressure takes a toll. I manage it by planning thoroughly upfront — but it's still something I'm working on.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /about-left -->
+
+    <!-- ─── RIGHT ─── -->
     <div class="about-right">
 
       <div class="about-block">
@@ -221,7 +356,8 @@
         </div>
       </div>
 
-    </div>
+    </div><!-- /about-right -->
+
   </div>
 </div>
 
