@@ -4,363 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Michela Monterosso</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --bg: #EDEDED;
-  --ink: #111110;
-  --mid: #1E1EFF;
-  --faint: #e8e7e2;
-  --serif: 'Inter', sans-serif;
-  --mono: 'DM Mono', 'Courier New', monospace;
-  --nav-h: 56px;
-}
-
-html { font-size: 15px; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--mono);
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ─── CREATURE ─── */
-#creature-stage canvas {
-  position: absolute;
-  top: 0; left: 0;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-
-/* ─── PAGE SYSTEM ─── */
-.page { display: none; }
-.page.active { display: flex; flex-direction: column; min-height: 100vh; }
-
-/* ─── NAV ─── */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg);
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2.4rem;
-  border-bottom: 1px solid var(--faint);
-}
-
-.nav-name {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  border: none;
-  background: none;
-  padding: 0;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-link {
-  font-size: 0.70rem;
-  font-family: var(--mono);
-  font-weight: 400;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--ink);
-  text-decoration: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  transition: color 0.18s;
-  position: relative;
-}
-.nav-link:hover {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.nav-link.active { color: var(--mid); }
-.nav-link.active::after { display: none; }
-
-/* ─── SHARED ─── */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2.4rem;
-  flex: 1;
-  width: 100%;
-}
-
-/* ─── LANDING ─── */
-.intro {
-  padding: 4.5rem 0 1.2rem;
-  max-width: 480px;
-}
-
-.intro-eyebrow {
-  font-size: 0.70rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--mid);
-  margin-bottom: 1.2rem;
-}
-
-.intro-body {
-  font-family: var(--serif);
-  font-size: 1.00rem;
-  font-weight: 500;
-}
-
-.intro-body em {
-  font-style: italic;
-  color: var(--mid);
-}
-
-/* ─── INDEX TABLE ─── */
-.index-section { padding-bottom: 0; }
-.index-row:last-child { border-bottom: none; }
-
-.index-head {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr 11rem 5rem;
-  gap: 0 1.6rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--faint);
-}
-
-.index-col {
-  font-size: 0.70rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #6D6D6D;
-}
-
-.index-row {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr 11rem 5rem;
-  gap: 0 1.6rem;
-  align-items: center;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--faint);
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  position: relative;
-  transition: padding-left 0.2s ease;
-}
-
-@media (hover: hover) {
-  .index-row::after {
-    content: '';
-    position: absolute;
-    left: -2.4rem; right: -2.4rem;
-    top: 0; bottom: 0;
-    box-shadow:
-      inset 2px 2px 0px rgba(255,255,255, 0.55),
-      inset -2px -2px 0px rgba(17,17,16, 0.18),
-      inset 1px 1px 0px rgba(255,255,255, 0.25),
-      inset -1px -1px 0px rgba(17,17,16, 0.10);
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 0;
-    pointer-events: none;
-  }
-  .index-row:hover::after { opacity: 1; }
-}
-.index-row > * {
-  position: relative;
-  z-index: 1;
-  transition: color 0.18s ease;
-}
-
-.row-num {
-  font-size: 0.70rem;
-  color: var(--mid);
-  letter-spacing: 0.06em;
-}
-
-.row-title {
-  font-family: var(--serif);
-  font-size: 1.00rem;
-  font-weight: 300;
-}
-
-.row-type {
-  font-size: 0.70rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--mid);
-}
-
-.row-year {
-  font-size: 0.70rem;
-  letter-spacing: 0.07em;
-  color: var(--ink);
-}
-
-/* ─── ABOUT PAGE ─── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 5rem;
-  padding: 4.5rem 0 6rem;
-  align-items: start;
-}
-
-.about-eyebrow {
-  font-size: 0.70rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--mid);
-  margin-bottom: 1.4rem;
-}
-
-.about-name {
-  font-family: var(--serif);
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 2rem;
-}
-
-.about-bio {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #555;
-  max-width: 38ch;
-}
-
-.about-bio + .about-bio { margin-top: 1.2em; }
-
-.about-right { padding-top: 0.3rem; }
-
-.about-block { margin-bottom: 2.8rem; }
-
-.about-block-label {
-  font-size: 0.70rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--mid);
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--faint);
-}
-
-.about-block-content {
-  font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--ink);
-}
-
-.contact-link {
-  display: block;
-  font-family: var(--serif);
-  font-size: 1rem;
-  color: var(--ink);
-  text-decoration: none;
-  padding: 0.7rem 0;
-  border-bottom: 1px solid var(--faint);
-  transition: padding-left 0.18s ease;
-}
-.contact-link:first-of-type { border-top: 1px solid var(--faint); }
-.contact-link:hover { padding-left: 0.5rem; }
-
-.contact-label {
-  font-family: var(--mono);
-  font-size: 0.70rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--mid);
-  display: block;
-  margin-bottom: 0.1rem;
-}
-
-/* ─── FOOTER ─── */
-footer {
-  margin-top: auto;
-  padding: 1.4rem 2.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-text {
-  font-size: 0.70rem;
-  letter-spacing: 0.08em;
-  color: #6D6D6D;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-#footer-creature-stage {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  position: relative;
-  height: 40px;
-  margin: 0 1rem;
-}
-
-#footer-creature-stage canvas {
-  position: absolute;
-  top: 0; left: 0;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-
-/* ─── FADE-IN ─── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.page.active .intro,
-.page.active .index-section,
-.page.active .about-grid {
-  animation: fadeUp 0.35s ease both;
-}
-
-/* ─── MOBILE ─── */
-@media (max-width: 640px) {
-  nav, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
-  .container { padding: 0 1.2rem; }
-  .footer-text { font-size: 0.60rem; letter-spacing: 0.04em; }
-
-  .index-head,
-  .index-row { grid-template-columns: 2rem 1fr 5rem; }
-  .index-col:nth-child(3),
-  .row-type { display: none; }
-  .index-row::after { left: -1.2rem; right: -1.2rem; }
-
-  .about-grid { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 0 5rem; }
-  .intro { padding: 3rem 0 2.5rem; }
-  .intro-body { font-size: 0.9rem; }
-}
-</style>
+<meta name="description" content="Portfolio of Michela Monterosso, Senior UX Designer. Research-led, human-centred design work across product, strategy and interaction.">
+<meta property="og:title" content="Michela Monterosso — UX & Product Designer based in Stockholm">
+<meta property="og:description" content="Portfolio of Michela Monterosso, Senior UX Designer. Research-led, human-centred design work across product, strategy and interaction.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miche7a.github.io/michelamonterosso/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Michela Monterosso — UX & Product Designer based in Stockholm">
+<meta name="twitter:description" content="Portfolio of Michela Monterosso, Senior UX Designer. Research-led, human-centred design work across product, strategy and interaction.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ─── NAV ─── -->
+<!-- ASCII Loader -->
+<div id="ascii-loader"><span id="ascii-bar"></span></div>
+
 <nav>
   <button class="nav-name" onclick="showPage('experience')">Michela Monterosso</button>
   <div class="nav-links">
@@ -382,70 +41,14 @@ footer {
     </div>
 
     <div class="index-section">
-      <div class="index-head">
+      <div class="index-head" id="index-head">
         <span class="index-col">#</span>
         <span class="index-col">Project</span>
         <span class="index-col">Type</span>
         <span class="index-col">Year</span>
       </div>
-
-      <a class="index-row" href="project-partsradet/index.html">
-        <span class="row-num">01</span>
-        <span class="row-title">A governamental challenge</span>
-        <span class="row-type">Product design</span>
-        <span class="row-year">2018</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">02</span>
-        <span class="row-title">Top delivery consumer app</span>
-        <span class="row-type">Product design</span>
-        <span class="row-year">2024</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">03</span>
-        <span class="row-title">Digitising sales rep</span>
-        <span class="row-type">Discovery UX</span>
-        <span class="row-year">2019</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">04</span>
-        <span class="row-title">Total app experience rehaul</span>
-        <span class="row-type">Product design</span>
-        <span class="row-year">2023</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">05</span>
-        <span class="row-title">Reviving reading</span>
-        <span class="row-type">Discovery UX</span>
-        <span class="row-year">2024</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">06</span>
-        <span class="row-title">An edge that can save lives</span>
-        <span class="row-type">Discover/Define UX</span>
-        <span class="row-year">2022</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">07</span>
-        <span class="row-title">Elevating travel at sea</span>
-        <span class="row-type">Discover/Define UX</span>
-        <span class="row-year">2022</span>
-      </a>
-
-      <a class="index-row" href="#">
-        <span class="row-num">08</span>
-        <span class="row-title">On being manager and team lead</span>
-        <span class="row-type">Responsibilities</span>
-        <span class="row-year">2025</span>
-      </a>
-
-    </div>
+      <div id="project-list"></div>
+    </div>    </div>
   </div>
 
   <footer>
@@ -479,9 +82,9 @@ footer {
           Currently open to new opportunities.
         </p>
 
-        <div style="margin-top: 2.5rem;">
-          <p class="about-block-label" style="border-bottom: 1px solid var(--faint); padding-bottom: 0.5rem; margin-bottom: 0.9rem;">Languages</p>
-          <div class="about-block-content" style="font-family: var(--mono); font-size: 0.70rem; letter-spacing: 0.07em; line-height: 2; color: var(--mid);">
+        <div>
+          <p class="languages-label">Languages</p>
+          <div class="about-block-content" class="languages-list">
             Italian — Native &nbsp;·&nbsp; English — Fluent &nbsp;·&nbsp; Japanese — Fluent<br>
             Swedish — Professional &nbsp;·&nbsp; Spanish — Professional
           </div>
@@ -494,23 +97,23 @@ footer {
           <p class="about-block-label">Experience</p>
           <div class="about-block-content">
             Senior UX Designer — Framna<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2021 – Present · Stockholm</span>
+            <span class="about-meta">2021 – Present · Stockholm</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             UX Designer — Making Waves Sweden<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2019 – 2021 · Stockholm</span>
+            <span class="about-meta">2019 – 2021 · Stockholm</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             Senior Designer &amp; Art Director — Seventy Agency<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2014 – 2018 · Stockholm</span>
+            <span class="about-meta">2014 – 2018 · Stockholm</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             Designer — Identity Works<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2013 – 2014 · Stockholm</span>
+            <span class="about-meta">2013 – 2014 · Stockholm</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             Designer — Art &amp; Strategy<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2011 – 2012 · Tokyo</span>
+            <span class="about-meta">2011 – 2012 · Tokyo</span>
           </div>
         </div>
 
@@ -518,15 +121,15 @@ footer {
           <p class="about-block-label">Education</p>
           <div class="about-block-content">
             Design Lead — Hyper Island<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2018 – 2019</span>
+            <span class="about-meta">2018 – 2019</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             Graphic Design — Istituto Europeo di Design<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2008 – 2011 · incl. one year at IED Barcelona</span>
+            <span class="about-meta">2008 – 2011 · incl. one year at IED Barcelona</span>
           </div>
-          <div class="about-block-content" style="margin-top: 1.1rem;">
+          <div class="about-block-content">
             BA Japanese Studies — SOAS, University of London<br>
-            <span style="font-size:0.68rem; font-family: var(--mono); color: var(--mid); letter-spacing:0.06em;">2003 – 2007</span>
+            <span class="about-meta">2003 – 2007</span>
           </div>
         </div>
 
@@ -555,8 +158,32 @@ footer {
 
 
 <script>
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     ASCII LOADER CONFIG — tweak here
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  var loaderConfig = {
+    enabled:  true,     // ← false = no loader, links navigate instantly
+    pattern:  '<:>:',   // the ASCII pattern to scroll. Try: '-=-=', '^v^v', '-=x='
+    length:   48,       // how many characters wide the bar is
+    speed:    2,        // scroll speed (higher = faster). Every N frames, shift by 1
+    duration: 700,      // ms to show loader before navigating to project page
+  };
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     CREATURE CONFIG — tweak here
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  var creatureConfig = {
+    speed:        0.15,   // walking speed (px per frame). Higher = faster
+    size:         27,     // sprite width in px (27 = 1x native, 54 = 2x)
+    flipInterval: 50,     // frames between walk cycle flips. Lower = faster legs
+    idleChance:   0.003,  // probability per frame of stopping to idle (0–1)
+    idleMinFrames: 60,    // minimum frames to stay idle
+    idleMaxFrames: 140,   // maximum frames to stay idle
+  };
+
   // ── NAV CREATURE (Mametchi SVG — mirror animation) ──
   (function() {
+    if (!creatureConfig.enabled) return;
     var stage = document.getElementById("footer-creature-stage");
     if (!stage) return;
 
@@ -582,15 +209,15 @@ footer {
     });
 
     // Exact 1× natural SVG size = 27×31px — integer, no blur
-    var SW = 27;
-    var SH = 31;
+    var SW = creatureConfig.size;
+    var SH = Math.round(creatureConfig.size * (31/27)); // maintain aspect ratio
 
     var x     = W * 0.3;   // current x position
     var dir   = 1;          // 1 = right, -1 = left
-    var speed = 0.15;
-    var flipped = false;    // mirror state = animation frame
-    var flipTick = 0;       // count frames between flips
-    var FLIP_INTERVAL = 50; // frames between each mirror swap (~1 second at 60fps)
+    var speed        = creatureConfig.speed;
+    var flipped      = false;
+    var flipTick     = 0;
+    var FLIP_INTERVAL = creatureConfig.flipInterval; // frames between each mirror swap (~1 second at 60fps)
 
     // Idle / jump state
     var state = "walk";
@@ -616,8 +243,8 @@ footer {
         if (x > W - SW - 4) { x = W - SW - 4; dir = -1; }
         if (x < 4)           { x = 4;          dir =  1; }
         // Randomly go idle
-        if (stateTimer > 200 && Math.random() < 0.003) {
-          state = "idle"; idleTimer = 60 + Math.floor(Math.random() * 80); stateTimer = 0;
+        if (stateTimer > 200 && Math.random() < creatureConfig.idleChance) {
+          state = "idle"; idleTimer = creatureConfig.idleMinFrames + Math.floor(Math.random() * (creatureConfig.idleMaxFrames - creatureConfig.idleMinFrames)); stateTimer = 0;
         }
       } else if (state === "idle") {
         idleTimer--;
@@ -655,6 +282,54 @@ footer {
 
     // ── ACCENT COLOUR (fixed electric blue) ──
   document.documentElement.style.setProperty('--mid', '#1E1EFF');
+
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     PROJECTS — edit order here, numbers update automatically
+     To reorder: move a line up or down
+     To add:     add a new object to the array
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  /* ── COLUMN VISIBILITY — set true/false to show/hide ── */
+  var showType = true;
+  var showYear = true;
+
+  var projects = [
+    { title: "A governmental challenge",       type: "UX Strategy / Web Design", year: 2018, href: "project-partsradet/index.html" },
+    { title: "Top delivery consumer app",      type: "Product Design",            year: 2024, href: "#" },
+    { title: "Digitising sales rep",           type: "Discovery UX",              year: 2019, href: "#" },
+    { title: "Total app experience rehaul",    type: "Product Design",            year: 2023, href: "#" },
+    { title: "Reviving reading",               type: "Discovery UX",              year: 2024, href: "#" },
+    { title: "An edge that can save lives",    type: "Discover / Define UX",      year: 2022, href: "#" },
+    { title: "Elevating travel at sea",        type: "Discover / Define UX",      year: 2022, href: "#" },
+    { title: "On being manager and team lead", type: "Responsibilities",           year: 2025, href: "#" },
+  ];
+
+  function renderProjects() {
+    var list = document.getElementById('project-list');
+    if (!list) return;
+
+    // Show/hide column headers to match flags
+    var cols = document.querySelectorAll('.index-head .index-col');
+    if (cols[2]) cols[2].style.display = showType ? '' : 'none';
+    if (cols[3]) cols[3].style.display = showYear ? '' : 'none';
+
+    list.innerHTML = projects.map(function(p, i) {
+      var num = String(i + 1).padStart(2, '0');
+      var type = showType ? '<span class="row-type">' + p.type + '</span>' : '';
+      var year = showYear ? '<span class="row-year">' + p.year + '</span>' : '';
+      return [
+        '<a class="index-row" href="' + p.href + '">',
+        '  <span class="row-num">' + num + '</span>',
+        '  <span class="row-title">' + p.title + '</span>',
+        '  ' + type,
+        '  ' + year,
+        '</a>'
+      ].join('\n');
+    }).join('\n');
+  }
+
+  renderProjects();
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
