@@ -168,45 +168,22 @@ function toggleAccordion(id) {
   document.getElementById(id).classList.toggle('is-open');
 }
 
-// Dynamic divider rendering
+// Static divider based on screen size
 function renderDivider() {
   var divider = document.getElementById('divider-fill');
   if (!divider) return;
   
-  var dividerSection = divider.parentElement;
-  
-  // Create a temporary span to measure character width
-  var temp = document.createElement('span');
-  temp.style.font = getComputedStyle(divider).font;
-  temp.style.visibility = 'hidden';
-  temp.textContent = '─';
-  document.body.appendChild(temp);
-  var charWidth = temp.offsetWidth;
-  document.body.removeChild(temp);
-  
-  // Get available width from the container width  
-  var container = document.querySelector('.container');
-  var containerWidth = container ? container.offsetWidth : window.innerWidth - 48; // fallback to viewport minus padding
-  
-  // Calculate number of dashes (reserve space for: ⊹˚₊‧ + ‧₊˚⊹)
-  var ends = document.createElement('span');
-  ends.style.font = getComputedStyle(divider).font;
-  ends.style.visibility = 'hidden';
-  ends.textContent = '⊹˚₊‧‧₊˚⊹';
-  document.body.appendChild(ends);
-  var endsWidth = ends.offsetWidth;
-  document.body.removeChild(ends);
-  
-  var dashCount = Math.max(1, Math.floor((containerWidth - endsWidth) / charWidth));
-  var dashes = '─'.repeat(dashCount);
-  
-  divider.textContent = '⊹˚₊‧' + dashes + '‧₊˚⊹';
+  // Use different dividers for desktop vs mobile
+  if (window.innerWidth >= 640) {
+    // Desktop: longer divider
+    divider.textContent = '⊹˚₊‧────────────────────────────────────────‧₊˚⊹';
+  } else {
+    // Mobile: shorter divider
+    divider.textContent = '⊹˚₊‧──────────────────────‧₊˚⊹';
+  }
 }
 
-// Wait for full layout paint before calculating
-window.addEventListener('load', function() {
-  setTimeout(renderDivider, 100);
-});
+window.addEventListener('load', renderDivider);
 window.addEventListener('resize', renderDivider);
 </script>
 </body>
