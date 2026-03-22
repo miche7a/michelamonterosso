@@ -13,6 +13,7 @@
 <meta name="twitter:title" content="About — Michela Monterosso">
 <meta name="twitter:description" content="Senior UX Designer based in Stockholm. Research-led, human-centred design across product, strategy and interaction.">
 <link rel="stylesheet" href="style.css">
+
 <style>
 
   /* ── Experience entries ── */
@@ -27,8 +28,8 @@
     padding-bottom: 0;
   }
   .about-responsibilities {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
+    font-family: var(--serif);
+    font-size: var(--text-meta);
     font-weight: 300;
     line-height: var(--leading-relaxed);
     color: var(--dim);
@@ -79,7 +80,7 @@
   .sw-dot svg { width: 10px; height: 10px; }
   .sw-title {
     font-family: var(--mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-meta);
     font-weight: 400;
     color: var(--ink);
     display: block;
@@ -122,6 +123,14 @@
     color: var(--mid);
     letter-spacing: var(--tracking-normal);
   }
+  @media (max-width: 640px) {
+  .sw-title {
+    font-size: 14px;
+  }
+  .sw-sub {
+    font-size: 13px;
+  }
+}
 
 </style>
 </head>
@@ -366,9 +375,7 @@
   <span class="footer-text">&copy; 2025</span>
 </footer>
 
-<script>
-  document.documentElement.style.setProperty('--mid', '#1E1EFF');
-</script>
+
 
 </body>
 </html>
