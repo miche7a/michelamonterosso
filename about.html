@@ -184,12 +184,9 @@ function renderDivider() {
   var charWidth = temp.offsetWidth;
   document.body.removeChild(temp);
   
-  // Get available width from the section's content width (accounting for padding)
-  var sectionStyles = getComputedStyle(dividerSection);
-  var sectionWidth = dividerSection.offsetWidth;
-  var paddingLeft = parseFloat(sectionStyles.paddingLeft);
-  var paddingRight = parseFloat(sectionStyles.paddingRight);
-  var availableWidth = sectionWidth - paddingLeft - paddingRight;
+  // Get available width from the container width  
+  var container = document.querySelector('.container');
+  var containerWidth = container ? container.offsetWidth : window.innerWidth - 48; // fallback to viewport minus padding
   
   // Calculate number of dashes (reserve space for: ⊹˚₊‧ + ‧₊˚⊹)
   var ends = document.createElement('span');
@@ -200,18 +197,16 @@ function renderDivider() {
   var endsWidth = ends.offsetWidth;
   document.body.removeChild(ends);
   
-  var dashCount = Math.max(1, Math.floor((availableWidth - endsWidth) / charWidth));
+  var dashCount = Math.max(1, Math.floor((containerWidth - endsWidth) / charWidth));
   var dashes = '─'.repeat(dashCount);
   
   divider.textContent = '⊹˚₊‧' + dashes + '‧₊˚⊹';
 }
 
-// Wait for DOM to be fully loaded before rendering
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderDivider);
-} else {
-  renderDivider();
-}
+// Wait for full layout paint before calculating
+window.addEventListener('load', function() {
+  setTimeout(renderDivider, 100);
+});
 window.addEventListener('resize', renderDivider);
 </script>
 </body>
