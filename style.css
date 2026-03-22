@@ -140,7 +140,7 @@
   --tldr-heading-weight: 400;
   --tldr-heading-color:  var(--ink);
   --tldr-heading-gap:    var(--text-gap-sm);
-  --tldr-body-size:      var(--text-sm);
+  --tldr-body-size:      var(--text-base);
   --tldr-body-weight:    300;
   --tldr-body-color:     var(--dim);
   --tldr-body-leading:   1.75;
@@ -377,7 +377,7 @@ footer {
    Own classes so you can restyle independently
    from regular .col-* content columns.
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.tldr-col-group { display: flex; gap: var(--tldr-col-gap); align-items: start; }
+.tldr-col-group { display: flex; gap: var(--tldr-col-gap); align-items: start; font-size: var(--text-md); }
 .tldr-col-group > * { flex: 1; }
 .tldr-col-heading {
   font-family: var(--mono); font-size: var(--tldr-heading-size);
@@ -489,6 +489,7 @@ footer {
    MOBILE (below 640px)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 640px) {
+    .chip { font-size: var(--text-sm); }
   :root {
     --page-px:      1.2rem;
     --block-gap:    3rem;
@@ -509,7 +510,8 @@ footer {
   .intro         { padding: 3rem 0 1.2rem; }
   .intro-body    { font-size: 1.00rem; }
   .project-title { font-size: var(--text-xl); }
-  .project-meta  { gap: 1.5rem; flex-wrap: wrap; }
+    .project-intro { font-size: var(--text-md); }
+  .project-meta  { flex-direction: row; gap: 1.5rem; width: 100%; flex-wrap: wrap; }
   .col-2, .col-3, .tldr-col-group { flex-direction: column; }
   .img-grid-2,
   .img-grid-3    { grid-template-columns: 1fr; }
