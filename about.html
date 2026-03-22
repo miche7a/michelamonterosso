@@ -33,7 +33,7 @@ html, body { overflow-x: hidden; }
 .contact-label { font-family: var(--mono); font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 0.1rem; }
 .sw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 2.5rem; }
 .sw-accordion { border-top: var(--divider); }
-.sw-accordion-trigger { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; cursor: pointer; user-select: none; border: none; background: none; width: 100%; text-align: left; flex-direction: row-reverse; }
+.sw-accordion-trigger { display: flex; align-items: center; justify-content: flex-start; padding: 0.8rem 0; cursor: pointer; user-select: none; border: none; background: none; width: 100%; text-align: left; gap: 7px; }
 .sw-accordion-trigger:hover .sw-cat { color: var(--mid); }
 .sw-accordion-body { display: none; padding-top: 1rem; padding-bottom: 1rem; }
 .sw-accordion.is-open .sw-accordion-body { display: block; }
@@ -77,8 +77,8 @@ html, body { overflow-x: hidden; }
 
       <div class="sw-accordion" id="acc-strengths">
         <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-strengths')">
-          <span class="sw-cat">Strengths</span>
           <span class="sw-arrow">&#9679;</span>
+          <span class="sw-cat">Strengths</span>
         </button>
         <div class="sw-accordion-body">
           <div class="sw-item">
@@ -98,8 +98,8 @@ html, body { overflow-x: hidden; }
 
       <div class="sw-accordion" id="acc-notes">
         <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-notes')">
-          <span class="sw-cat">Honest notes</span>
           <span class="sw-arrow">&#9679;</span>
+          <span class="sw-cat">Honest notes</span>
         </button>
         <div class="sw-accordion-body">
           <div class="sw-item">
