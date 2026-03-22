@@ -15,128 +15,47 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-
-  /* ── Experience entries ── */
-  .about-block-content {
-    padding-bottom: 1.4rem;
-    margin-bottom: 1.4rem;
-    border-bottom: var(--divider);
-  }
-  .about-block-content:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .about-responsibilities {
-    font-family: var(--serif);
-    font-size: var(--text-meta);
-    font-weight: 300;
-    line-height: var(--leading-relaxed);
-    color: var(--dim);
-    margin-top: 0.6rem;
-  }
-
-  /* ── Strengths / Weaknesses ── */
-  .sw-cat-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 0.9rem;
-    padding-bottom: 0.4rem;
-    border-bottom: var(--divider);
-  }
-  .sw-cat {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 400;
-    letter-spacing: var(--tracking-label);
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .sw-cat-icon {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    opacity: 0.6;
-  }
-  .sw-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .sw-dot {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sw-dot.s { background: #e1f5ee; }
-  .sw-dot.w { background: #faeeda; }
-  .sw-dot svg { width: 10px; height: 10px; }
-  .sw-title {
-    font-family: var(--mono);
-    font-size: var(--text-meta);
-    font-weight: 400;
-    color: var(--ink);
-    display: block;
-    margin-bottom: 2px;
-    letter-spacing: var(--tracking-normal);
-  }
-  .sw-sub {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 300;
-    color: var(--dim);
-    display: block;
-    line-height: var(--leading-relaxed);
-  }
-
-  /* ── Languages grid ── */
-  .languages-grid {
-    display: flex;
-    flex-direction: column;
-  }
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.5rem 0;
-    border-bottom: var(--divider);
-  }
-  .lang-item:last-child { border-bottom: none; }
-  .lang-name {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 400;
-    color: var(--ink);
-    letter-spacing: var(--tracking-normal);
-  }
-  .lang-level {
-    font-family: var(--mono);
-    font-size: var(--text-sm);
-    font-weight: 300;
-    color: var(--mid);
-    letter-spacing: var(--tracking-normal);
-  }
-  @media (max-width: 640px) {
-  .sw-title {
-    font-size: 14px;
-  }
-  .sw-sub {
-    font-size: 13px;
-  }
+html, body { overflow-x: hidden; }
+.about-top { padding: 4.5rem 0 3rem; margin-bottom: 3rem; }
+.about-bio { font-family: var(--serif); font-size: var(--text-lg); line-height: var(--leading-normal); color: var(--dim); max-width: 100%; }
+.about-bio + .about-bio { margin-top: 1.2em; }
+.about-bottom { padding-bottom: 6rem; }
+.about-divider { text-align: center; font-family: var(--mono); font-size: var(--text-md); font-weight: 400; color: var(--ink); letter-spacing: 0.2em; margin-bottom: 3rem; overflow: hidden; }
+.about-block { margin-bottom: 2.8rem; }
+.about-block-label { font-size: var(--text-md); letter-spacing: var(--tracking-normal); text-transform: uppercase; color: var(--ink); font-family: var(--mono); font-weight: 400; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: var(--divider); display: flex; align-items: center; gap: 7px; }
+.about-block-content { font-family: var(--serif); font-size: var(--text-base); line-height: var(--leading-normal); color: var(--ink); padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: var(--divider); }
+.about-block-content:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.about-meta { font-size: var(--text-sm); font-family: var(--mono); color: var(--mid); letter-spacing: var(--tracking-normal); display: block; margin-top: 0.15rem; }
+.about-responsibilities { font-family: var(--serif); font-size: var(--text-base); font-weight: 300; line-height: var(--leading-relaxed); color: var(--dim); margin-top: 0.6rem; }
+.contact-link { display: block; font-family: var(--serif); font-size: var(--text-md); color: var(--ink); text-decoration: none; padding: 0.7rem 0; border-bottom: var(--divider); }
+.contact-link:first-of-type { border-top: none; }
+.contact-label { font-family: var(--mono); font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 0.1rem; }
+.sw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 2.5rem; }
+.sw-accordion { border-top: var(--divider); }
+.sw-accordion-trigger { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; cursor: pointer; user-select: none; border: none; background: none; width: 100%; text-align: left; }
+.sw-accordion-trigger:hover .sw-cat { color: var(--mid); }
+.sw-accordion-body { display: none; padding-top: 1rem; padding-bottom: 1rem; }
+.sw-accordion.is-open .sw-accordion-body { display: block; }
+.sw-cat { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink); }
+.sw-arrow { font-size: var(--text-sm); color: var(--mid); line-height: 1; display: inline-block; flex-shrink: 0; }
+.sw-accordion.is-open .sw-arrow { color: var(--ink); }
+.sw-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.sw-dot { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; border-radius: 2px; display: flex; align-items: center; justify-content: center; }
+.sw-dot.s { background: #d8d7d3; }
+.sw-dot.w { background: #d8d7d3; }
+.sw-dot svg { width: 10px; height: 10px; }
+.sw-title { font-family: var(--mono); font-size: 0.82rem; font-weight: 400; color: var(--ink); display: block; margin-bottom: 2px; letter-spacing: var(--tracking-normal); }
+.sw-sub { font-family: var(--mono); font-size: 0.82rem; font-weight: 300; color: var(--dim); display: block; line-height: var(--leading-normal); }
+@media (max-width: 640px) {
+  html, body, .container { overflow-x: hidden; }
+  .about-top { padding: 1.2rem 0 1rem; margin-bottom: 1rem; }
+  .sw-grid { grid-template-columns: 1fr; gap: 0; }
+  .about-divider { font-size: var(--text-sm); white-space: nowrap; overflow: hidden; }
 }
-
 </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
 <nav>
   <a class="nav-name" href="index.html">Michela Monterosso</a>
   <div class="nav-links">
@@ -146,236 +65,104 @@
 </nav>
 
 <div class="container">
-  <div class="about-grid">
 
-    <!-- ─── LEFT ─── -->
-    <div class="about-left">
-      <p class="about-eyebrow">About</p>
-      <h1 class="about-name">Michela<br>Monterosso</h1>
+  <div class="about-top">
+    <p class="about-bio">I'm a Senior UX Designer based in Stockholm with 10+ years of experience across branding, interaction design, and product strategy. I started as a graphic designer in Tokyo, retrained through Hyper Island, and have been leading UX work since.</p>
+    <p class="about-bio">My practice is research-led and human-centred — I care about the problem behind the problem, ask a lot of WHYs, and bring a cross-disciplinary perspective shaped by working across cultures, industries, and time zones.</p>
+    <p class="about-bio">Currently open to new opportunities.</p>
 
-      <p class="about-bio">
-        I'm a Senior UX Designer based in Stockholm with 10+ years of experience
-        across branding, interaction design, and product strategy. I started as a
-        graphic designer in Tokyo, retrained through Hyper Island, and have been
-        leading UX work since.
-      </p>
-      <p class="about-bio">
-        My practice is research-led and human-centred — I care about the
-        problem behind the problem, ask a lot of WHYs, and bring a cross-disciplinary
-        perspective shaped by working across cultures, industries, and time zones.
-      </p>
-      <p class="about-bio">
-        Currently open to new opportunities.
-      </p>
+    <div class="sw-grid">
 
-      <!-- ─── Strengths / Weaknesses ─── -->
-      <div style="margin-top: 2.5rem;">
-
-        <div class="sw-cat-row">
-          <!-- Replace src with your hosted sword icon e.g. images/icon-sword.png -->
-          <!-- <img class="sw-cat-icon" src="images/icon-sword.png" alt=""> -->
-          <span class="sw-cat">Strengths</span>
-        </div>
-
-        <div class="sw-item">
-          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div>
-            <span class="sw-title">Chaos to structure</span>
-            <span class="sw-sub">Thrives on complexity — tangled flows, edge cases, competing constraints — and maps them into something plannable and clear.</span>
-          </div>
-        </div>
-
-        <div class="sw-item">
-          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div>
-            <span class="sw-title">People to outcomes</span>
-            <span class="sw-sub">Brings designers, developers, and stakeholders together — facilitates, synthesises, and turns it into concrete features and milestones.</span>
-          </div>
-        </div>
-
-        <div class="sw-item">
-          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div>
-            <span class="sw-title">Reliable by default</span>
-            <span class="sw-sub">Consistently fast, consistently high quality, and always straight about risks and limits. Teams know what they're getting.</span>
-          </div>
-        </div>
-
-        <div class="sw-item">
-          <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div>
-            <span class="sw-title">Deep domain empathy</span>
-            <span class="sw-sub">Gets genuinely immersed in any field — editorial, nautical, construction — and designs from the inside out.</span>
-          </div>
-        </div>
-
-        <div style="margin-top: 1.5rem;">
-          <div class="sw-cat-row">
-            <!-- Replace src with your hosted shield icon e.g. images/icon-shield.png -->
-            <!-- <img class="sw-cat-icon" src="images/icon-shield.png" alt=""> -->
-            <span class="sw-cat">Weaknesses</span>
-          </div>
-
+      <div class="sw-accordion" id="acc-strengths">
+        <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-strengths')">
+          <span class="sw-cat">My strengths</span>
+          <span class="sw-arrow">&#9679;</span>
+        </button>
+        <div class="sw-accordion-body">
           <div class="sw-item">
-            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
-            <div>
-              <span class="sw-title">Design system libraries</span>
-              <span class="sw-sub">Building complex component libraries with deep variants and tokens — I understand the logic, I've worked with brand systems for years, but it's not the kind of execution work I'm looking for.</span>
-            </div>
+            <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#111110" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><span class="sw-title">Chaos to structure</span><span class="sw-sub">I thrive when things are messy. Complex flows, edge cases, competing constraints are some of my favourite challenges.</span></div>
           </div>
-
           <div class="sw-item">
-            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
-            <div>
-              <span class="sw-title">Staying creative under pressure</span>
-              <span class="sw-sub">When stress spikes, I default to pragmatism. Learning to protect creative space even in crunch.</span>
-            </div>
+            <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#111110" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><span class="sw-title">People to outcomes</span><span class="sw-sub">I'm good at bringing people together across disciplines, facilitating the conversation, and making sure it leads somewhere concrete.</span></div>
           </div>
-
           <div class="sw-item">
-            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#BA7517" stroke-width="1.4"/></svg></div>
-            <div>
-              <span class="sw-title">Deadline anxiety</span>
-              <span class="sw-sub">Sustained time pressure takes a toll. I manage it by planning thoroughly upfront — but it's still something I'm working on.</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div><!-- /about-left -->
-
-    <!-- ─── RIGHT ─── -->
-    <div class="about-right">
-
-      <div class="about-block">
-        <p class="about-block-label">Experience</p>
-
-        <div class="about-block-content">
-          Senior UX Designer — Framna
-          <span class="about-meta">2021 – Present · Stockholm</span>
-          <p class="about-responsibilities">
-            End-to-end UX across apps and websites — from research and user journeys
-            through wireframes, interaction design, and content strategy. I also lead
-            workshops, contribute to internal tooling, and collaborate closely with
-            developers and clients throughout delivery.
-          </p>
-        </div>
-
-        <div class="about-block-content">
-          UX Designer — Making Waves
-          <span class="about-meta">2019 – 2021 · Stockholm</span>
-          <p class="about-responsibilities">
-            Research, user journeys, wireframes, user flows, and content strategy
-            for both apps and websites. Involved in building internal tools for the
-            team and facilitating workshops with clients and stakeholders.
-          </p>
-        </div>
-
-        <div class="about-block-content">
-          Senior Designer &amp; Art Director — Seventy Agency
-          <span class="about-meta">2014 – 2018 · Stockholm</span>
-          <p class="about-responsibilities">
-            Brand concepts and visual executions for a range of clients — developing
-            complete visual identities from strategy to final execution. Responsibilities
-            included art direction, client communications, and workshop facilitation.
-          </p>
-        </div>
-
-        <div class="about-block-content">
-          Designer — Identity Works
-          <span class="about-meta">2013 – 2014 · Stockholm</span>
-          <p class="about-responsibilities">
-            Packaging concept and design for consumer brands including Arla,
-            Oriflame, and Mondalez.
-          </p>
-        </div>
-
-        <div class="about-block-content">
-          Designer — Art &amp; Strategy
-          <span class="about-meta">2011 – 2012 · Tokyo</span>
-          <p class="about-responsibilities">
-            Visual design with a strong focus on web design and art direction.
-          </p>
-        </div>
-
-        <div class="about-block-content">
-          HR Officer &amp; Project Manager — Komatsu
-          <span class="about-meta">2007 – 2008 · Tokyo</span>
-          <p class="about-responsibilities">
-            Planning and organisation of company-wide employee education programmes.
-            Responsibilities included project management, survey collection and
-            analysis, recruitment, and candidate relations.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="about-block">
-        <p class="about-block-label">Education</p>
-
-        <div class="about-block-content">
-          Design Lead — Hyper Island
-          <span class="about-meta">2018 – 2019</span>
-        </div>
-        <div class="about-block-content">
-          Graphic Design — Istituto Europeo di Design
-          <span class="about-meta">2008 – 2011 · incl. one year at IED Barcelona</span>
-        </div>
-        <div class="about-block-content">
-          BA Japanese Studies — SOAS, University of London
-          <span class="about-meta">2003 – 2007</span>
-        </div>
-      </div>
-
-      <div class="about-block">
-        <p class="about-block-label">Contact</p>
-        <a class="contact-link" href="https://www.linkedin.com/in/michelamonterosso/" target="_blank">
-          <span class="contact-label">LinkedIn</span>
-          linkedin.com/in/michelamonterosso
-        </a>
-        <a class="contact-link" href="mailto:hello@michelamonterosso.com">
-          <span class="contact-label">Email</span>
-          hello@michelamonterosso.com
-        </a>
-      </div>
-
-      <div class="about-block">
-        <p class="about-block-label">Languages</p>
-        <div class="languages-grid">
-          <div class="lang-item">
-            <span class="lang-name">Italian</span>
-            <span class="lang-level">Native</span>
-          </div>
-          <div class="lang-item">
-            <span class="lang-name">English</span>
-            <span class="lang-level">Fluent</span>
-          </div>
-          <div class="lang-item">
-            <span class="lang-name">Japanese</span>
-            <span class="lang-level">Fluent</span>
-          </div>
-          <div class="lang-item">
-            <span class="lang-name">Swedish</span>
-            <span class="lang-level">Professional</span>
-          </div>
-          <div class="lang-item">
-            <span class="lang-name">Spanish</span>
-            <span class="lang-level">Professional</span>
+            <div class="sw-dot s"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#111110" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><span class="sw-title">Deep domain empathy</span><span class="sw-sub">I immerse myself fully in whatever field I'm designing for. Whether it's editorial, logistics, automotive, or healthcare, I learn the language and design from the inside.</span></div>
           </div>
         </div>
       </div>
 
-    </div><!-- /about-right -->
+      <div class="sw-accordion" id="acc-notes">
+        <button class="sw-accordion-trigger" onclick="toggleAccordion('acc-notes')">
+          <span class="sw-cat">My honest notes</span>
+          <span class="sw-arrow">&#9679;</span>
+        </button>
+        <div class="sw-accordion-body">
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#111110" stroke-width="1.4"/></svg></div>
+            <div><span class="sw-title">Design system libraries</span><span class="sw-sub">I understand how component libraries work as I spent years building brand systems, but deep token architecture isn't the kind of work that excites me.</span></div>
+          </div>
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#111110" stroke-width="1.4"/></svg></div>
+            <div><span class="sw-title">Staying creative under pressure</span><span class="sw-sub">When stress spikes I default to pragmatism. I'm working on protecting creative space even when things get tight.</span></div>
+          </div>
+          <div class="sw-item">
+            <div class="sw-dot w"><svg viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="3" stroke="#111110" stroke-width="1.4"/></svg></div>
+            <div><span class="sw-title">Craft over coordination</span><span class="sw-sub">I tend to lose my spark when I spend most of my time away from my hands-on UX crafting. I need to stay close to design, not just in the product process.</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="about-bottom">
+
+    <div class="about-divider">&#x22B9;&#x02DA;&#x208A;&#x2027;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2027;&#x208A;&#x02DA;&#x22B9;</div>
+
+    <div class="about-block">
+      <p class="about-block-label">Experience</p>
+      <div class="about-block-content">Senior UX Designer — Framna<span class="about-meta">2021 – Present · Stockholm</span><p class="about-responsibilities">End-to-end UX across apps and websites — from research and user journeys through wireframes, interaction design, and content strategy. I also lead workshops, contribute to internal tooling, and collaborate closely with developers and clients throughout delivery.</p></div>
+      <div class="about-block-content">UX Designer — Making Waves<span class="about-meta">2019 – 2021 · Stockholm</span><p class="about-responsibilities">Research, user journeys, wireframes, user flows, and content strategy for both apps and websites. Involved in building internal tools for the team and facilitating workshops with clients and stakeholders.</p></div>
+      <div class="about-block-content">Senior Designer &amp; Art Director — Seventy Agency<span class="about-meta">2014 – 2018 · Stockholm</span><p class="about-responsibilities">Brand concepts and visual executions for a range of clients — developing complete visual identities from strategy to final execution. Responsibilities included art direction, client communications, and workshop facilitation.</p></div>
+      <div class="about-block-content">Designer — Identity Works<span class="about-meta">2013 – 2014 · Stockholm</span><p class="about-responsibilities">Packaging concept and design for consumer brands including Arla, Oriflame, and Mondalez.</p></div>
+      <div class="about-block-content">Designer — Art &amp; Strategy<span class="about-meta">2011 – 2012 · Tokyo</span><p class="about-responsibilities">Visual design with a strong focus on web design and art direction.</p></div>
+      <div class="about-block-content">HR Officer &amp; Project Manager — Komatsu<span class="about-meta">2007 – 2008 · Tokyo</span><p class="about-responsibilities">Planning and organisation of company-wide employee education programmes. Responsibilities included project management, survey collection and analysis, recruitment, and candidate relations.</p></div>
+    </div>
+
+    <div class="about-block">
+      <p class="about-block-label">Education</p>
+      <div class="about-block-content">Design Lead — Hyper Island<span class="about-meta">2018 – 2019</span></div>
+      <div class="about-block-content">Graphic Design — Istituto Europeo di Design<span class="about-meta">2008 – 2011</span></div>
+      <div class="about-block-content">BA Japanese Studies — SOAS, University of London<span class="about-meta">2003 – 2007</span></div>
+    </div>
+
+    <div class="about-block">
+      <p class="about-block-label">Contact</p>
+      <a class="contact-link" href="https://www.linkedin.com/in/michelamonterosso/" target="_blank">
+        <span class="contact-label">LinkedIn</span>linkedin.com/in/michelamonterosso
+      </a>
+      <a class="contact-link" href="mailto:hello@michelamonterosso.com">
+        <span class="contact-label">Email</span>hello@michelamonterosso.com
+      </a>
+    </div>
 
   </div>
 </div>
 
 <footer>
   <span class="footer-text">Michela Monterosso</span>
+  <div id="footer-creature-stage"></div>
   <span class="footer-text">&copy; 2025</span>
 </footer>
 
-
-
+<script src="script.js"></script>
+<script>
+function toggleAccordion(id) {
+  document.getElementById(id).classList.toggle('is-open');
+}
+</script>
 </body>
 </html>
