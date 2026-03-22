@@ -497,6 +497,10 @@ footer {
     --tldr-col-gap: 1.2rem;
   }
   .footer-text   { font-size: var(--text-xs); letter-spacing: 0.04em; }
+  .nav-link      { font-size: var(--text-base); }
+  .about-meta    { font-size: var(--text-base); }
+  .meta-label    { font-size: var(--text-base); }
+  .meta-value    { font-size: var(--text-base); }
   .index-head,
   .index-row     { grid-template-columns: 2rem 1fr 4rem; }
   .index-col:nth-child(4),
