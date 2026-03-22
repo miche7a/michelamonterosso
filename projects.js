@@ -18,7 +18,7 @@ var PROJECTS = [
   {
     slug:   'project-partsradet',
     title:  'A governmental challenge',
-    type:   'End-to-End UX',
+    type:   'Product Design',
     client: 'Partsrådet',
     year:   2024,
     href:   'project-partsradet/index.html',
@@ -58,7 +58,7 @@ var PROJECTS = [
   {
     slug:   'project-06',
     title:  'An edge that can save lives',
-    type:   'Discover / Define UX',
+    type:   'UX Discovery',
     client: '',
     year:   2022,
     href:   '#',
@@ -66,7 +66,7 @@ var PROJECTS = [
   {
     slug:   'project-07',
     title:  'Elevating travel at sea',
-    type:   'Discover / Define UX',
+    type:   'UX Discovery',
     client: '',
     year:   2022,
     href:   '#',
@@ -74,7 +74,7 @@ var PROJECTS = [
   {
     slug:   'project-08',
     title:  'On being manager and team lead',
-    type:   'Responsibilities',
+    type:   'Skills',
     client: '',
     year:   2025,
     href:   '#',

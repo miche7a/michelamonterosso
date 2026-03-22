@@ -265,7 +265,7 @@ footer {
    HOMEPAGE — INTRO
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .intro {
-  padding: var(--page-top) 0 1.2rem; max-width: 480px;
+  padding: var(--page-top) 0 1.2rem; max-width: 100%;
 }
 .intro-eyebrow {
   font-size: var(--text-sm); letter-spacing: var(--tracking-widest);
@@ -284,6 +284,7 @@ footer {
   gap: 0 1.6rem; padding: 0.55rem 0; border-bottom: var(--divider);
 }
 .index-col { font-size: var(--text-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--muted); }
+.index-col:nth-child(4) { text-align: right; }
 .index-row {
   display: grid; grid-template-columns: 2.2rem 1fr 11rem 5rem;
   gap: 0 1.6rem; align-items: center; padding: var(--row-padding-y) 0;
@@ -305,7 +306,7 @@ footer {
 .row-num   { font-size: var(--text-sm); color: var(--mid); letter-spacing: var(--tracking-normal); }
 .row-title { font-family: var(--serif); font-size: var(--text-md); font-weight: 300; }
 .row-type  { font-size: var(--text-sm); letter-spacing: 0.09em; text-transform: uppercase; color: var(--mid); }
-.row-year  { font-size: var(--text-sm); letter-spacing: 0.07em; color: var(--ink); }
+.row-year  { font-size: var(--text-sm); letter-spacing: 0.07em; color: var(--ink); text-align: right; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    HOMEPAGE — ABOUT PAGE
@@ -498,11 +499,11 @@ footer {
   .footer-text   { font-size: var(--text-xs); letter-spacing: 0.04em; }
   .index-head,
   .index-row     { grid-template-columns: 2rem 1fr 4rem; }
-  .index-col:nth-child(3),
-  .row-type      { display: none; }
+  .index-col:nth-child(4),
+  .row-year      { display: none; }
   .about-grid    { grid-template-columns: 1fr; padding: 3rem 0 4rem; }
   .intro         { padding: 3rem 0 1.2rem; }
-  .intro-body    { font-size: var(--text-base); }
+  .intro-body    { font-size: 1.00rem; }
   .project-title { font-size: var(--text-xl); }
   .project-meta  { gap: 1.5rem; flex-wrap: wrap; }
   .col-2, .col-3, .tldr-col-group { flex-direction: column; }
