@@ -20,7 +20,8 @@ html, body { overflow-x: hidden; }
 .about-bio { font-family: var(--serif); font-size: var(--text-lg); line-height: var(--leading-normal); color: var(--dim); max-width: 100%; }
 .about-bio + .about-bio { margin-top: 1.2em; }
 .about-bottom { padding-bottom: 6rem; }
-.about-divider { text-align: center; font-family: var(--mono); font-size: var(--text-md); font-weight: 400; color: var(--ink); letter-spacing: 0.2em; margin-bottom: 3rem; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding-left: var(--page-px); padding-right: var(--page-px); overflow: hidden; }
+.divider-section { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 3rem var(--page-px); background: var(--bg); }
+.about-divider { text-align: center; font-family: var(--mono); font-size: var(--text-md); font-weight: 400; color: var(--ink); letter-spacing: 0.2em; width: 100%; overflow: visible; line-height: 1.4; }
 .about-block { margin-bottom: 2.8rem; }
 .about-block-label { font-size: var(--text-md); letter-spacing: var(--tracking-normal); text-transform: uppercase; color: var(--ink); font-family: var(--mono); font-weight: 400; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: var(--divider); display: flex; align-items: center; gap: 7px; }
 .about-block-content { font-family: var(--serif); font-size: var(--text-base); line-height: var(--leading-normal); color: var(--ink); padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: var(--divider); }
@@ -50,7 +51,8 @@ html, body { overflow-x: hidden; }
   html, body, .container { overflow-x: hidden; }
   .about-top { padding: 1.2rem 0 1rem; margin-bottom: 1rem; }
   .sw-grid { grid-template-columns: 1fr; gap: 0; }
-  .about-divider { font-size: var(--text-sm); white-space: nowrap; overflow: hidden; }
+  .divider-section { padding: 1.5rem var(--page-px); }
+  .about-divider { font-size: var(--text-sm); line-height: 1.2; overflow: visible; }
 }
 </style>
 </head>
@@ -118,9 +120,11 @@ html, body { overflow-x: hidden; }
     </div>
   </div>
 
-  <div class="about-bottom">
+  <div class="divider-section">
+    <div class="about-divider" id="divider-fill"></div>
+  </div>
 
-    <div class="about-divider">&#x22B9;&#x02DA;&#x208A;&#x2027;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2027;&#x208A;&#x02DA;&#x22B9;</div>
+  <div class="about-bottom">
 
     <div class="about-block">
       <p class="about-block-label">Experience</p>
@@ -163,6 +167,41 @@ html, body { overflow-x: hidden; }
 function toggleAccordion(id) {
   document.getElementById(id).classList.toggle('is-open');
 }
+
+// Dynamic divider rendering
+function renderDivider() {
+  var divider = document.getElementById('divider-fill');
+  if (!divider) return;
+  
+  // Create a temporary span to measure character width
+  var temp = document.createElement('span');
+  temp.style.font = getComputedStyle(divider).font;
+  temp.style.visibility = 'hidden';
+  temp.textContent = '─';
+  document.body.appendChild(temp);
+  var charWidth = temp.offsetWidth;
+  document.body.removeChild(temp);
+  
+  // Get available width
+  var availableWidth = divider.offsetWidth;
+  
+  // Calculate number of dashes (reserve space for: ⊹˚₊‧ + ‧₊˚⊹)
+  var ends = document.createElement('span');
+  ends.style.font = getComputedStyle(divider).font;
+  ends.style.visibility = 'hidden';
+  ends.textContent = '⊹˚₊‧‧₊˚⊹';
+  document.body.appendChild(ends);
+  var endsWidth = ends.offsetWidth;
+  document.body.removeChild(ends);
+  
+  var dashCount = Math.max(1, Math.floor((availableWidth - endsWidth) / charWidth));
+  var dashes = '─'.repeat(dashCount);
+  
+  divider.textContent = '⊹˚₊‧' + dashes + '‧₊˚⊹';
+}
+
+renderDivider();
+window.addEventListener('resize', renderDivider);
 </script>
 </body>
 </html>
