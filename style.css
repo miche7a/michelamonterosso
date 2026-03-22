@@ -1,4 +1,11 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
+
+@media (min-width: 900px) {
+  .tldr-col-body {
+    font-size: var(--text-sm);
+  }
+}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    DESIGN TOKENS — change here, updates everywhere
@@ -106,8 +113,8 @@
   --chip-gap:   0.4rem;
   --chip-above: 1rem;
   --chip-below: 2.5rem;
-  --chip-px:    8px;
-  --chip-py:    3px;
+  --chip-px:    14px;
+  --chip-py:    7px;
 
   /* Columns */
   --col-2-gap: 3rem;
@@ -140,7 +147,7 @@
   --tldr-heading-weight: 400;
   --tldr-heading-color:  var(--ink);
   --tldr-heading-gap:    var(--text-gap-sm);
-  --tldr-body-size:      var(--text-base);
+  --tldr-body-size:      0.80rem;
   --tldr-body-weight:    300;
   --tldr-body-color:     var(--dim);
   --tldr-body-leading:   1.75;
@@ -407,7 +414,7 @@ footer {
 .text-block + .text-block { margin-top: 1.2em; }
 
 .chips { display: flex; flex-wrap: wrap; gap: var(--chip-gap); margin-top: var(--chip-above); margin-bottom: var(--chip-below); }
-.chip  { font-family: var(--mono); font-size: var(--text-xs); font-weight: 300; letter-spacing: 0.08em; color: var(--ink); border: var(--border-strong); padding: var(--chip-py) var(--chip-px); white-space: nowrap; }
+.chip  { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: 0.08em; color: var(--ink); border: var(--border-strong); padding: var(--chip-py) var(--chip-px); white-space: nowrap; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PROJECT PAGE — IMAGES
