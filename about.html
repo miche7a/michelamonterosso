@@ -15,68 +15,7 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-html, body { overflow-x: hidden; }
-.about-top { padding: 4.5rem 0 0; }
-.about-bio { font-family: var(--serif); font-size: var(--text-lg); line-height: var(--leading-normal); color: var(--dim); max-width: 100%; }
-.about-bio + .about-bio { margin-top: 1.2em; }
-.about-bottom { padding-bottom: 6rem; }
-.divider-section { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 3rem var(--page-px); background: var(--bg); }
-.about-divider { text-align: center; font-family: var(--mono); font-size: var(--text-md); font-weight: 400; color: var(--ink); letter-spacing: 0.2em; width: 100%; overflow: visible; line-height: 1.4; }
-.about-block { margin-bottom: 2.8rem; }
-.about-block-label { font-size: var(--text-lg); letter-spacing: var(--tracking-normal); text-transform: uppercase; color: var(--ink); font-family: var(--serif); font-weight: 400; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: var(--divider); display: flex; align-items: center; gap: 7px; }
-.about-block-content { font-family: var(--serif); font-size: var(--text-base); line-height: var(--leading-normal); color: var(--ink); padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: var(--divider); }
-.about-block-content:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.about-meta { font-size: var(--text-sm); font-family: var(--mono); color: var(--mid); letter-spacing: var(--tracking-normal); display: block; margin-top: 0.15rem; }
-.about-responsibilities { font-family: var(--serif); font-size: var(--text-base); font-weight: 300; line-height: var(--leading-relaxed); color: var(--dim); margin-top: 0.6rem; }
-.contact-link { display: block; font-family: var(--serif); font-size: var(--text-base); color: var(--ink); text-decoration: none; padding: 0.7rem 0; border-bottom: var(--divider); }
-.contact-link:first-of-type { border-top: none; }
-.contact-label { font-family: var(--mono); font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 0.1rem; }
-.sw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 0; }
-.sw-accordion { border-top: var(--divider); }
-.sw-accordion-trigger { display: flex; align-items: center; justify-content: flex-start; padding: 0.8rem 0; cursor: pointer; user-select: none; border: none; background: none; width: 100%; text-align: left; gap: 7px; }
-.sw-accordion-trigger:hover .sw-cat { color: var(--mid); }
-.sw-accordion-body { display: none; padding-top: 1rem; padding-bottom: 1rem; }
-.sw-accordion.is-open .sw-accordion-body { display: block; }
-.sw-cat { font-family: var(--mono); font-size: var(--text-md); font-weight: 400; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink); padding-bottom: 0.7rem; display: block; }
-.sw-arrow { font-size: var(--text-sm); color: var(--mid); line-height: 1; display: inline-block; flex-shrink: 0; }
-.sw-accordion.is-open .sw-arrow { color: var(--ink); }
-.sw-item { display: flex; align-items: flex-start; justify-content: flex-start; gap: 10px; margin-bottom: 10px; }
-.sw-dot { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; border-radius: 2px; display: flex; align-items: center; justify-content: center; }
-.sw-dot.s { background: #d8d7d3; }
-.sw-dot.w { background: #d8d7d3; }
-.sw-dot svg { width: 10px; height: 10px; }
-.sw-title { font-family: var(--mono); font-size: 0.82rem; font-weight: 400; color: var(--ink); display: block; margin-bottom: 2px; letter-spacing: var(--tracking-normal); }
-.sw-sub { font-family: var(--mono); font-size: 0.82rem; font-weight: 300; color: var(--dim); display: block; line-height: var(--leading-normal); }
-.nav-link--download {
-  color: var(--mid) !important;
-  border: 1px solid var(--mid);
-  padding: 3px 9px;
-  letter-spacing: var(--tracking-wide);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  box-shadow: 2px 2px 0px var(--mid);
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.nav-link--download:hover {
-  text-decoration: none !important;
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0px var(--mid);
-}
-.nav-link--download:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px var(--mid);
-}
 
-  html, body, .container { overflow-x: hidden; }
-  .about-top { padding: 1.2rem 0 0; }
-  .divider-section { padding: 1.5rem var(--page-px); }
-  .about-divider { font-size: var(--text-sm); line-height: 1.2; overflow: visible; }
-  .about-meta { font-size: var(--text-base); }
-  .contact-label { font-size: var(--text-base); }
-  .sw-cat { font-size: var(--text-base); }
-  .sw-arrow { font-size: var(--text-base); }
-}
 </style>
 </head>
 <body>
@@ -95,7 +34,7 @@ html, body { overflow-x: hidden; }
   <div class="about-top">
     <div style="display:flex; align-items:baseline; justify-content:space-between;">
       <div class="about-block-label">About</div>
-      <a class="nav-link nav-link--download" href="michela-monterosso-cv.pdf" download>Download CV</a>
+      <a class="nav-link nav-link--download" href="michela-monterosso-cv.pdf" download>Download</a>
     </div>
     <p class="about-bio">I'm a Senior UX Designer based in Stockholm with 10+ years of experience across branding, interaction design, and product strategy. I started as a graphic designer in Tokyo, retrained through Hyper Island, and have been leading UX work since.</p>
     <p class="about-bio">My practice is research-led and human-centred — I care about the problem behind the problem, ask a lot of WHYs, and bring a cross-disciplinary perspective shaped by working across cultures, industries, and time zones.</p>
