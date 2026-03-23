@@ -52,20 +52,18 @@ html, body { overflow-x: hidden; }
   border: 1px solid var(--mid);
   padding: 3px 9px;
   letter-spacing: var(--tracking-wide);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  box-shadow: 2px 2px 0px var(--mid);
+  transition: none;
+  box-shadow: none;
   position: relative;
   top: 0;
   left: 0;
 }
-.nav-link--download:hover {
-  text-decoration: none !important;
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0px var(--mid);
-}
+
+.nav-link--download:hover,
 .nav-link--download:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px var(--mid);
+  text-decoration: none !important;
+  transform: none;
+  box-shadow: none;
 }
 
   html, body, .container { overflow-x: hidden; }
