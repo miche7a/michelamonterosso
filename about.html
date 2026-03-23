@@ -86,7 +86,9 @@ html, body { overflow-x: hidden; }
 }
 
   html, body, .container { overflow-x: hidden; }
-  .about-top { padding: 1.2rem 0 0; }
+  ..about-top {
+  padding: var(--section-header-top) 0 var(--section-header-bottom);
+}
   .divider-section { padding: 1.5rem var(--page-px); }
   .about-divider { font-size: var(--text-sm); line-height: 1.2; overflow: visible; }
   .about-meta { font-size: var(--text-base); }
