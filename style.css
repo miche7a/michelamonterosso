@@ -89,6 +89,9 @@
   --page-bottom: 4rem;
   --block-gap:   5rem;
   --block-gap-sm: 2rem;
+  .about-top {
+  padding: var(--section-header-top) 0 var(--section-header-bottom);
+}
 
   /* Section header */
   --section-header-top:    4rem;
