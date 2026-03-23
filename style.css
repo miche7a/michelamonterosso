@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
+
 /* Keep about-blocks and about-bottom padded and aligned */
 .about-content {
   max-width: var(--container-w);
@@ -5,9 +8,6 @@
   margin-right: auto;
   padding: 0 var(--page-px);
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
 
 @media (min-width: 900px) {
   .tldr-col-body {
