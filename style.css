@@ -1,21 +1,3 @@
-.nav-link--download {
-  color: var(--mid) !important;
-  border: 1px solid var(--mid);
-  padding: 3px 14px;
-  letter-spacing: var(--tracking-wide);
-  background: transparent;
-  transition: background 0.18s, color 0.18s;
-  position: relative;
-  top: 0;
-  left: 0;
-  box-shadow: none;
-  border-radius: 0.2em;
-}
-.nav-link--download:hover {
-  background: var(--mid);
-  color: var(--bg) !important;
-  text-decoration: none !important;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
 
