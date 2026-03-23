@@ -75,7 +75,14 @@ html, body { overflow-x: hidden; }
 .about-divider::before {
   content: "⊹˚₊‧────────────────────────────────────────────────────────────‧₊˚⊹";
 }
-
+@media (max-width: 640px) {
+  .about-divider {
+    font-size: var(--text-sm);
+    line-height: 1.2;
+    letter-spacing: 0.12em; /* helps spacing on phones */
+  }
+}
+  
 @media (max-width: 900px) {
   .about-divider::before {
     content: "⊹˚₊‧──────────────────────────────────────────────────────‧₊˚⊹";
