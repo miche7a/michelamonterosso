@@ -58,16 +58,29 @@ html, body { overflow-x: hidden; }
   top: 0;
   left: 0;
 }
+.nav-link--download {
+  color: var(--mid) !important;
+  border: 1px solid var(--mid);
+  padding: 3px 9px;
+  letter-spacing: var(--tracking-wide);
+  transition: background-color 0.12s ease, color 0.12s ease;
+  box-shadow: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
 .nav-link--download:hover {
   text-decoration: none !important;
-  background: blue;
+  background: var(--mid);
   color: var(--bg) !important;
+  transform: none;
 }
 
 .nav-link--download:active {
-  background: blue;
+  background: var(--mid);
   color: var(--bg) !important;
+  transform: none;
 }
 
   html, body, .container { overflow-x: hidden; }
