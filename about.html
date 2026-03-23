@@ -72,18 +72,16 @@ html, body { overflow-x: hidden; }
   transform: none;
 }
 
-@media (max-width: 640px) {
-  html, body, .container { overflow-x: hidden; }
-  .divider-section { padding: 1.5rem var(--page-px); }
-  .about-divider { font-size: var(--text-sm); line-height: 1.2; letter-spacing: 0.12em; }
-  .about-meta { font-size: var(--text-base); }
-  .contact-label { font-size: var(--text-base); }
-  .sw-cat { font-size: var(--text-base); }
-  .sw-arrow { font-size: var(--text-base); }
+@media (max-width: 900px) {
+  .about-divider::before {
+    content: "⊹˚₊‧──────────────────────────────────────────────────────‧₊˚⊹";
+  }
 }
 
-@media (max-width: 430px) {
-  .about-divider::before { content: "⊹˚₊‧────────────────────────────────────────‧₊˚⊹"; }
+@media (max-width: 390px) {
+  .about-divider::before {
+    content: "⊹˚₊‧───────────────────────────────‧₊˚⊹";
+  }
 }
 </style>
 </head>
