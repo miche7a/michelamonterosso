@@ -52,18 +52,22 @@ html, body { overflow-x: hidden; }
   border: 1px solid var(--mid);
   padding: 3px 9px;
   letter-spacing: var(--tracking-wide);
-  transition: none;
+  transition: background-color 0.12s ease, color 0.12s ease;
   box-shadow: none;
   position: relative;
   top: 0;
   left: 0;
 }
 
-.nav-link--download:hover,
-.nav-link--download:active {
+.nav-link--download:hover {
   text-decoration: none !important;
-  transform: none;
-  box-shadow: none;
+  background: blue;
+  color: var(--bg) !important;
+}
+
+.nav-link--download:active {
+  background: blue;
+  color: var(--bg) !important;
 }
 
   html, body, .container { overflow-x: hidden; }
