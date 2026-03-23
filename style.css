@@ -1,3 +1,10 @@
+/* Keep about-blocks and about-bottom padded and aligned */
+.about-content {
+  max-width: var(--container-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--page-px);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap');
 
@@ -538,6 +545,7 @@ footer {
   .intro         { padding: 3rem 0 1.2rem; }
   .intro-body    { font-size: 1.00rem; }
   .project-title { font-size: var(--text-xl); }
+  .sw-grid { grid-template-columns: 1fr !important; gap: 0; }
     .project-intro { font-size: var(--text-md); }
   .project-meta  { flex-direction: row; gap: 1.5rem; width: 100%; flex-wrap: wrap; }
   .col-2, .col-3, .tldr-col-group { flex-direction: column; }
@@ -549,6 +557,9 @@ footer {
   .proj-nav-label::after { content: "↳"; font-size: var(--text-sm); } */
 }
 
+@media (min-width: 641px) {
+  .sw-grid { grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+}
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PRINT
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
