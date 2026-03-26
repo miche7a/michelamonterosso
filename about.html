@@ -131,30 +131,10 @@ html, body { overflow-x: hidden; }
   top: 0;
   color: var(--mid);
 }
-footer {
-  width: 100%;
+.footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 1.25rem 0;
-  margin-top: 2.5rem;
-
-  color: var(--mid);
-  font-family: var(--mono);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
-}
-
-.footer-text {
-  white-space: nowrap;
-}
-
-#footer-creature-stage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-height: 28px; /* gives the creature room */
 }
   @media (max-width: 640px) {
   .about-divider {
@@ -330,13 +310,12 @@ footer {
    </div> <!-- end about-content -->
 
   <!-- footer now follows container width -->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-text">Michela Monterosso</span>
-      <div id="footer-creature-stage"></div>
-      <span class="footer-text">© 2026</span>
-    </div>
-  </footer>
+ <footer>
+  <div class="footer-inner">
+    <span class="footer-text">Michela Monterosso</span>
+    <span class="footer-text">© 2026</span>
+  </div>
+</footer>
 
 </div> <!-- end .container -->
 
