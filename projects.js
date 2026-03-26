@@ -25,11 +25,11 @@ var PROJECTS = [
   },
   {
     slug:   'project-02',
-    title:  'Top delivery consumer app',
+    title:  'Simplifying a complex logistics experience',
     type:   'Product Design',
     client: 'PostNord',
-    year:   2023,
-    href:   '#',
+    year:   2022-2025,
+    href:   'project-postnord/index.html'',
   },
  
   {
