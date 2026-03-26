@@ -131,10 +131,25 @@ html, body { overflow-x: hidden; }
   top: 0;
   color: var(--mid);
 }
+/* About footer: align to container edges, no weird extra spacing */
+footer {
+  margin: 0;                 /* kills default browser margin */
+  margin-top: 2.5rem;        /* keep only the spacing above footer */
+  padding: 1.25rem 0;        /* vertical breathing room */
+  width: 100%;
+}
+
 .footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0;                /* ensure no extra inset */
+}
+
+.footer-text {
+  margin: 0;                 /* if these are <p> somewhere, prevents default margins */
+  white-space: nowrap;
 }
   @media (max-width: 640px) {
   .about-divider {
@@ -309,7 +324,6 @@ html, body { overflow-x: hidden; }
         </div>
    </div> <!-- end about-content -->
 
-  <!-- footer now follows container width -->
  <footer>
   <div class="footer-inner">
     <span class="footer-text">Michela Monterosso</span>
