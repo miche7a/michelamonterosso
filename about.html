@@ -124,6 +124,18 @@ html, body { overflow-x: hidden; }
     line-height: 1.2;
     letter-spacing: 0.12em; /* helps spacing on phones */
   }
+  @media (max-width: 640px) {
+  /* Make Strengths / Honest notes copy a tad bigger on mobile */
+  .sw-title,
+  .sw-sub {
+    font-size: 0.88rem; /* was ~0.82rem */
+  }
+
+  /* Optional: slightly more comfortable line-height for the sub text */
+  .sw-sub {
+    line-height: 1.35;
+  }
+}
 
   .sw-grid {
     grid-template-columns: 1fr; /* stack */
