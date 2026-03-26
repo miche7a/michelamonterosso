@@ -132,9 +132,29 @@ html, body { overflow-x: hidden; }
   color: var(--mid);
 }
 footer {
-  font-size: 0.95rem;
-  line-height: 1.35;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   padding: 1.25rem 0;
+  margin-top: 2.5rem;
+
+  color: var(--mid);
+  font-family: var(--mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+}
+
+.footer-text {
+  white-space: nowrap;
+}
+
+#footer-creature-stage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-height: 28px; /* gives the creature room */
 }
   @media (max-width: 640px) {
   .about-divider {
@@ -306,22 +326,20 @@ footer {
       <a class="contact-link" href="/cdn-cgi/l/email-protection#d2bfbbb1bab7beb3fcbfbdbca6b7a0bda1a1bd92b5bfb3bbbefcb1bdbf">
         <span class="contact-label">Email</span><span class="__cf_email__" data-cfemail="b1dcd8d2d9d4ddd09fdcdedfc5d4c3dec2c2def1d6dcd0d8dd9fd2dedc">[email&#160;protected]</span>
       </a>
-    </div>
+        </div>
   </div> <!-- end about-content -->
 
   </div>
 </div>
 
 <footer>
-  <span class="footer-text">Michela Monterosso ☺︎ </span>
+  <span class="footer-text">Michela Monterosso</span>
   <div id="footer-creature-stage"></div>
-  <span class="footer-text">©; 2026</span>
+  <span class="footer-text">© 2026</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script><script>
-
-
-</script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
