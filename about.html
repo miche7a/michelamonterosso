@@ -133,7 +133,7 @@ html, body { overflow-x: hidden; }
 }
 .site-footer {
   margin-top: 2.5rem;
-  padding: 1.25rem 0;
+  padding: 1.25rem var(--page-px); /* full-bleed padding like nav */
   width: 100%;
   color: var(--mid);
   font-family: var(--mono);
@@ -145,7 +145,7 @@ html, body { overflow-x: hidden; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0; /* let .container control the side padding */
+  padding: 0; /* no inner container padding */
 }
 
 .footer-text {
@@ -327,7 +327,7 @@ html, body { overflow-x: hidden; }
 </div> <!-- end .container -->
 
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="footer-inner">
     <span class="footer-text">Michela Monterosso</span>
     <span class="footer-text">© 2026</span>
   </div>
