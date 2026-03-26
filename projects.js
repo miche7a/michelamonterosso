@@ -24,12 +24,12 @@ var PROJECTS = [
     href:   'project-partsradet/index.html',
   },
   {
-    slug:   'project-02',
+    slug:   'project-postnord',
     title:  'Simplifying a complex logistics experience',
     type:   'Product Design',
     client: 'PostNord',
     year:   2022-2025,
-    href:   'project-postnord/index.html'',
+    href:   'project-postnord/index.html',
   },
  
   {
