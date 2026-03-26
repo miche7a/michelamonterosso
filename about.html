@@ -133,19 +133,15 @@ html, body { overflow-x: hidden; }
 }
 .site-footer {
   margin-top: 2.5rem;
-  padding: 1.25rem var(--page-px); /* full-bleed padding like nav */
+  padding: 1.25rem var(--page-px);
   width: 100%;
-  color: var(--mid);
-  font-family: var(--mono);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
 }
 
 .site-footer .footer-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0; /* no inner container padding */
+  justify-content: space-between; /* left item left, right item right */
+  width: 100%;
 }
 
 .footer-text {
