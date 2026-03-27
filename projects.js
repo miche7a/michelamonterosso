@@ -15,7 +15,15 @@
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 var PROJECTS = [
-  {
+   {
+    slug:   'project-postnord',
+    title:  'Simplifying a complex logistics experience',
+    type:   'Product Design',
+    client: 'PostNord',
+    year:   2022 - 2025,
+    href:   'project-postnord/index.html',
+  },
+   {
     slug:   'project-partsradet',
     title:  'A governmental challenge',
     type:   'Product Design',
@@ -23,14 +31,7 @@ var PROJECTS = [
     year:   2024,
     href:   'project-partsradet/index.html',
   },
-  {
-    slug:   'project-postnord',
-    title:  'Simplifying a complex logistics experience',
-    type:   'Product Design',
-    client: 'PostNord',
-    year:   2022-2025,
-    href:   'project-postnord/index.html',
-  },
+
  
   {
     slug:   'project-06',
