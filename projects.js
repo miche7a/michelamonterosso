@@ -34,12 +34,12 @@ var PROJECTS = [
 
  
   {
-    slug:   'project-06',
-    title:  'An edge that can save lives',
+    slug:   'project-autoliv',
+    title:  'Defining a safety-driven product',
     type:   'UX Discovery',
-    client: '',
-    year:   2022,
-    href:   '#',
+    client: 'Autoliv',
+    year:   2025,
+    href:   'project-autoliv/index.html',
   },
   {
     slug:   'project-07',
