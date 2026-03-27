@@ -592,7 +592,13 @@ footer {
   .col-body {
     font-size: 0.85rem;
   }
+  .intro-break::before { content: '\A'; white-space: pre; }
+
+@media (max-width: 640px) {
+  .intro-break::before { content: ' '; white-space: normal; }
 }
+
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PRINT
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
