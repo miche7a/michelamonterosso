@@ -565,8 +565,8 @@ footer {
     pointer-events: none;
   }
   .intro-break { display: none; }
-  .vibe-desktop  { display: none; }
-  .vibe-mobile   { display: inline; }
+  .vibe-desktop  { display: none !important; }
+  .vibe-mobile   { display: inline !important; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
