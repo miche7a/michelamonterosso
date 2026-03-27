@@ -527,19 +527,23 @@ footer {
    MOBILE (below 640px)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 640px) {
-        /* Make project list hover state default on mobile */
-        .index-row::after {
-          content: '';
-          position: absolute;
-          left: calc(-1 * var(--page-px));
-          right: calc(-1 * var(--page-px));
-          top: 0;
-          bottom: 0;
-          box-shadow: var(--row-hover-shadow);
-          opacity: 1;
-          z-index: var(--z-base);
-          pointer-events: none;
-        }
+  .index-head,
+  .index-row { grid-template-columns: 1.8rem 1fr 5rem; gap: 0 0.8rem; }
+
+  /* Make project list hover state default on mobile */
+  .index-row::after {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--page-px));
+    right: calc(-1 * var(--page-px));
+    top: 0;
+    bottom: 0;
+    box-shadow: var(--row-hover-shadow);
+    opacity: 1;
+    z-index: var(--z-base);
+    pointer-events: none;
+  }
+}
       /* Disable hover effects for about.html on mobile */
       .nav-link:hover,
       .contact-link:hover,
