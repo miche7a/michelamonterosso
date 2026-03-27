@@ -585,24 +585,18 @@ footer {
   .proj-nav-label::after { content: "↳"; font-size: var(--text-sm); } */
 }
 
-@media (min-width: 641px) {
+@media (min-width: 601px) {
   .sw-grid { grid-template-columns: 1fr 1fr; gap: 0 4rem; }
 }
 @media (max-width: 640px) {
-  .col-body {
-    font-size: 0.85rem;
-  }
-  .intro-break::before { content: '\A'; white-space: pre; }
-.vibe-mobile { display: none; }
-
-@media (max-width: 640px) {
+  .col-body { font-size: 0.85rem; }
+  .intro-break::before { content: ' '; white-space: normal; }
   .vibe-desktop { display: none; }
   .vibe-mobile  { display: inline; }
 }
-@media (max-width: 640px) {
-  .intro-break::before { content: ' '; white-space: normal; }
-}
 
+.intro-break::before { content: '\A'; white-space: pre; }
+.vibe-mobile { display: none; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PRINT
