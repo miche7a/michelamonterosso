@@ -70,7 +70,7 @@
   --container-w:   900px;   /* ← change to widen/narrow all pages */
   --container-align: center;  /* ← "center" or "left" */
   --page-px:       2.4rem;
-  --content-max-w: 620px;
+  --content-max-w: 900px;
   --intro-max-w:   560px;
 
   /* Z-index */
