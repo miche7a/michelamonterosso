@@ -13,6 +13,7 @@
   .tldr-col-body {
     font-size:0.82rem;
   }
+  
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -582,6 +583,11 @@ footer {
 
 @media (min-width: 641px) {
   .sw-grid { grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+}
+@media (max-width: 640px) {
+  .col-body {
+    font-size: 0.83rem;
+  }
 }
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PRINT
