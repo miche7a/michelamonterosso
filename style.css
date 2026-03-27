@@ -450,8 +450,8 @@ footer {
 .col-2 > * { flex: 1; }
 .col-3 { display: flex; gap: var(--col-3-gap); align-items: start; }
 .col-3 > * { flex: 1; }
-.col-heading { font-family: var(--mono); font-size: 0.82rem); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: var(--text-gap-sm); }
-.col-body    { font-family: var(--mono); font-size: 0.82rem); font-weight: 300; line-height: 1.3; color: var(--dim); }
+.col-heading { font-family: var(--mono); font-size: 0.80rem); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: var(--text-gap-sm); }
+.col-body { font-family: var(--mono); font-size: 0.80rem; font-weight: 300; line-height: 1.5; color: var(--dim); }
 .col-body ul { list-style: none; padding: 0; margin: 0; }
 .col-body ul { list-style: none; padding: 0; margin: 0; }
 
