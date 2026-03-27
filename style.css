@@ -453,7 +453,21 @@ footer {
 .col-heading { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: var(--text-gap-sm); }
 .col-body    { font-family: var(--mono); font-size: var(--text-sm); font-weight: 300; line-height: var(--leading-normal); color: var(--dim); }
 .col-body ul { list-style: none; padding: 0; margin: 0; }
-.col-body ul li::before { content: "—  "; color: var(--mid); }
+.col-body ul { list-style: none; padding: 0; margin: 0; }
+
+.col-body ul li {
+  position: relative;
+  padding-left: 1rem; /* space for the dot */
+  margin-bottom: 0.3em;
+}
+
+.col-body ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--mid);
+}
 .col-body ul li { margin-bottom: 0.3em; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
