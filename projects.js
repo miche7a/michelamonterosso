@@ -20,7 +20,7 @@ var PROJECTS = [
     title:  'Simplifying a complex logistics experience',
     type:   'Product Design',
     client: 'PostNord',
-    year:   '2022–2025',
+    year:   '2022–25',
     href:   'project-postnord/index.html',
   },
    {
