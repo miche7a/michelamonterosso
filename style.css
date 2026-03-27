@@ -36,9 +36,9 @@
 
   /* Font sizes */
   --text-xs:   0.60rem;
-  --text-sm:   0.80rem;
+  --text-sm:   0.81rem;
   --text-tag:  0.70rem;
-  --text-meta: 0.80rem;
+  --text-meta: 0.81rem;
   --text-base: 0.90rem;
   --text-md:   1.00rem;
   --text-lg:   1.05rem;
@@ -450,8 +450,8 @@ footer {
 .col-2 > * { flex: 1; }
 .col-3 { display: flex; gap: var(--col-3-gap); align-items: start; }
 .col-3 > * { flex: 1; }
-.col-heading { font-family: var(--mono); font-size: 0.80rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: var(--text-gap-sm); }
-.col-body { font-family: var(--mono); font-size: 0.80rem; font-weight: 300; line-height: 1.5; color: var(--dim); }
+.col-heading { font-family: var(--mono); font-size: var(--text-sm); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: var(--text-gap-sm); }
+.col-body { font-family: var(--mono); font-size: var(--text-sm); font-weight: 300; line-height: 1.5; color: var(--dim); }
 .col-body ul { list-style: none; padding: 0; margin: 0; }
 .col-body ul { list-style: none; padding: 0; margin: 0; }
 
