@@ -459,7 +459,7 @@ footer {
 .col-body ul li {
   position: relative;
   padding-left: 1rem; /* space for the dot */
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 .col-body ul li::before {
@@ -469,7 +469,7 @@ footer {
   top: 0;
   color: var(--mid);
 }
-.col-body ul li { margin-bottom: 0.3em; }
+.col-body ul li { margin-bottom: 0.5em; }
 
 .col-2.is-stacked {
   flex-direction: column;
