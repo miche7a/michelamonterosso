@@ -593,7 +593,12 @@ footer {
     font-size: 0.85rem;
   }
   .intro-break::before { content: '\A'; white-space: pre; }
+.vibe-mobile { display: none; }
 
+@media (max-width: 640px) {
+  .vibe-desktop { display: none; }
+  .vibe-mobile  { display: inline; }
+}
 @media (max-width: 640px) {
   .intro-break::before { content: ' '; white-space: normal; }
 }
