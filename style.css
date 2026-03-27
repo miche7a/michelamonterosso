@@ -319,6 +319,9 @@ footer {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0 5rem; padding: 4.5rem 0 6rem; align-items: start;
 }
+.about-top {
+  padding: var(--section-header-top) 0 var(--section-header-bottom);
+}
 .about-eyebrow { font-size: var(--text-sm); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--mid); margin-bottom: 1.4rem; }
 .about-name    { font-family: var(--serif); font-size: var(--text-2xl); font-weight: 400; line-height: var(--leading-tight); margin-bottom: 2rem; }
 .about-bio     { font-family: var(--serif); font-size: var(--text-lg); line-height: var(--leading-normal); color: var(--dim); max-width: 38ch; }
