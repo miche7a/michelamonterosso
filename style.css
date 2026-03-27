@@ -561,7 +561,7 @@ footer {
     z-index: var(--z-base);
     pointer-events: none;
   }
-  .intro-break::before { content: ' '; white-space: normal; }
+  .intro-break { display: none; }
   .vibe-desktop  { display: none; }
   .vibe-mobile   { display: inline; }
 }
