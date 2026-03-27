@@ -524,8 +524,10 @@ footer {
   .meta-label    { font-size: var(--text-base); }
   .meta-value    { font-size: var(--text-base); }
   .index-head,
-  .index-row     { grid-template-columns: 1.8rem 1fr 5rem; gap: 0 0.8rem; }
+  .index-row     { grid-template-columns: 1.8rem 1fr; gap: 0 0.8rem; }
+  .index-col:nth-child(3),
   .index-col:nth-child(4),
+  .row-type,
   .row-year      { display: none; }
   .about-grid    { grid-template-columns: 1fr; padding: 3rem 0 4rem; }
   .intro         { padding: 3rem 0 1.2rem; }
