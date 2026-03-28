@@ -45,6 +45,7 @@
     <div class="index-head" id="index-head">
       <span class="index-col">#</span>
       <span class="index-col">Project</span>
+      <span class="index-col">Client</span>
       <span class="index-col">Type</span>
       <span class="index-col">Year</span>
     </div>
@@ -164,22 +165,24 @@ var showYear = true;
 
   /* ── PROJECT LIST ── */
   function renderProjects() {
-    var list = document.getElementById('project-list');
-    if (!list) return;
-    var cols = document.querySelectorAll('.index-head .index-col');
-    if (cols[2]) cols[2].style.display = showType ? '' : 'none';
-    if (cols[3]) cols[3].style.display = showYear ? '' : 'none';
-    if (typeof PROJECTS === "undefined") return;
-    list.innerHTML = PROJECTS.map(function(p, i) {
-      var num  = String(i + 1).padStart(2, '0');
-      var type = showType ? '<span class="row-type">' + p.type + '</span>' : '';
-      var year = showYear ? '<span class="row-year">' + p.year + '</span>' : '';
-      return '<a class="index-row" href="' + p.href + '">' +
-        '<span class="row-num">' + num + '</span>' +
-        '<span class="row-title">' + p.title + '</span>' +
-        type + year + '</a>';
-    }).join('');
-  }
+  var list = document.getElementById('project-list');
+  if (!list) return;
+  var cols = document.querySelectorAll('.index-head .index-col');
+  if (cols[2]) cols[2].style.display = '';
+  if (cols[3]) cols[3].style.display = showType ? '' : 'none';
+  if (cols[4]) cols[4].style.display = showYear ? '' : 'none';
+  if (typeof PROJECTS === "undefined") return;
+  list.innerHTML = PROJECTS.map(function(p, i) {
+    var num    = String(i + 1).padStart(2, '0');
+    var client = '<span class="row-client">' + (p.client || '—') + '</span>';
+    var type   = showType ? '<span class="row-type">' + p.type + '</span>' : '';
+    var year   = showYear ? '<span class="row-year">' + p.year + '</span>' : '';
+    return '<a class="index-row" href="' + p.href + '">' +
+      '<span class="row-num">' + num + '</span>' +
+      '<span class="row-title">' + p.title + '</span>' +
+      client + type + year + '</a>';
+  }).join('');
+}
   renderProjects();
 
   /* ── ASCII LOADER ── */
