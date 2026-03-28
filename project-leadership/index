@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership — Michela Monterosso</title>
+<meta name="description" content="Leadership alongside craft — team lead and people manager experience across UX teams.">
+<meta property="og:title" content="Leadership — Michela Monterosso">
+<meta property="og:description" content="Leadership alongside craft — team lead and people manager experience across UX teams.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miche7a.github.io/michelamonterosso/project-leadership/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leadership — Michela Monterosso">
+<meta name="twitter:description" content="Leadership alongside craft — team lead and people manager experience across UX teams.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a class="nav-name" href="../index.html">Michela Monterosso</a>
+  <div class="nav-links">
+    <a class="nav-link" href="../index.html">Work</a>
+    <a class="nav-link" href="../about.html">CV</a>
+  </div>
+</nav>
+
+<!-- ─── PROJECT CONTENT ─── -->
+<div class="container">
+
+  <div class="project-header" id="project-header">
+    <div class="project-header-top">
+      <h1 class="project-title">Leadership alongside craft</h1>
+      <div class="tldr-widget" id="tldr-toggle" onclick="toggleTldr()">
+        <span class="tldr-label">TL;DR</span>
+        <img class="tldr-toggle-img" id="tldr-img" alt="toggle">
+      </div>
+    </div>
+    <div class="project-meta">
+      <div>
+        <div class="meta-label">Type</div>
+        <div class="meta-value" id="meta-type">Leadership</div>
+      </div>
+      <div>
+        <div class="meta-label">Context</div>
+        <div class="meta-value" id="meta-client">Framna</div>
+      </div>
+      <div>
+        <div class="meta-label">Year</div>
+        <div class="meta-value" id="meta-year">2021–2025</div>
+      </div>
+    </div>
+    <div class="content-full">
+      <p class="project-intro">
+        In addition to hands-on UX work, I took on leadership responsibilities
+        in two forms: first as a team lead within the PostNord team, and later
+        as a people manager for designers across the organisation.
+      </p>
+    </div>
+    <div class="content-tldr">
+      <p class="project-intro">
+        Team lead and people manager alongside hands-on UX work — coaching designers, improving team structures, and enabling delivery across teams.
+      </p>
+    </div>
+  </div>
+
+  <div class="content-full">
+
+  <!-- Team Lead -->
+  <div class="block">
+    <div class="subheading">Team Lead</div>
+    <p class="text-block">
+      As team lead, I worked closely with both the team and stakeholders to
+      connect roadmap decisions with what was actually happening in the sprint.
+      Because I was still actively designing, I had a strong understanding of
+      the team's day-to-day reality and could help bridge execution, planning,
+      and stakeholder expectations.
+    </p>
+    <p class="text-block">
+      I facilitated sprint planning, supported delivery flow, removed blockers,
+      and led retrospectives with a strong focus on turning feedback into
+      concrete change.
+    </p>
+    <div class="col-2 is-stacked" style="margin-top: 1.5rem;">
+      <div>
+        <p class="col-heading">Responsibilities</p>
+        <div class="col-body">
+          <ul>
+            <li>Led sprint planning, retrospectives, and stakeholder alignment while working hands-on as a UX designer</li>
+            <li>Improved team ways of working through actionable retrospective follow-ups, meeting changes, and process refinements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- People Manager -->
+  <div class="block">
+    <div class="subheading">People Manager</div>
+    <p class="text-block">
+      As a manager, I supported up to seven designers across different teams
+      through coaching, development talks, feedback, and career progression.
+      I also helped improve the structures around development by redesigning
+      the development talk process and initiating work to clarify design role
+      levels and expectations across the organisation.
+    </p>
+    <div class="col-2 is-stacked" style="margin-top: 1.5rem;">
+      <div>
+        <p class="col-heading">Responsibilities</p>
+        <div class="col-body">
+          <ul>
+            <li>Coached and mentored designers across teams through weekly one-on-ones and development check-ins</li>
+            <li>Managed development talks, feedback collection, progression discussions, and salary input</li>
+            <li>Redesigned development frameworks and initiated role-level definitions for designers from junior to expert</li>
+            <li>Contributed to design leadership initiatives within the competence area, including learning and skill-building activities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <div class="block">
+    <div class="subheading">Reflection</div>
+    <p class="text-block">
+      Through both roles I developed strong skills in coaching, alignment,
+      and team enablement. At the same time, these experiences clarified that
+      my strongest contribution and motivation lies in hands-on design work.
+      This realisation has made me a stronger designer and collaborator —
+      ready to support with my skillset whenever it is needed most.
+    </p>
+  </div>
+
+  </div><!-- /content-full -->
+
+  <!-- TL;DR extended content -->
+  <div class="content-tldr">
+    <div class="block block--flush">
+      <div class="tldr-col-group">
+        <div>
+          <p class="tldr-col-heading">Team Lead</p>
+          <p class="tldr-col-body">Bridged execution, planning, and stakeholder expectations while staying hands-on as a designer. Led sprint planning, retros, and delivery flow.</p>
+        </div>
+        <div>
+          <p class="tldr-col-heading">People Manager</p>
+          <p class="tldr-col-body">Supported up to seven designers through coaching, development talks, and career progression. Redesigned development frameworks and clarified role levels.</p>
+        </div>
+        <div>
+          <p class="tldr-col-heading">The learning</p>
+          <p class="tldr-col-body">Leadership experience deepened my understanding of teams and delivery. It also confirmed that hands-on design is where I contribute most.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── NEXT PROJECT NAV ─── -->
+  <div class="project-nav">
+    <a class="proj-nav-link" href="../index.html">
+      <span class="proj-nav-label">Back to work</span>
+      <span class="proj-nav-arrow">↳</span>
+    </a>
+  </div>
+
+  <!-- ─── APPENDIX: CREDITS ─── -->
+  <div class="credits-appendix">
+    <div class="credits">
+      <div>
+        <div class="credit-label">Responsibilities</div>
+        <div class="credit-value">
+          Sprint planning &amp; retros<br>
+          Stakeholder alignment<br>
+          Coaching &amp; mentoring<br>
+          Development talks<br>
+          Role-level frameworks
+        </div>
+      </div>
+      <div>
+        <div class="credit-label">Scope</div>
+        <div class="credit-value">
+          Team lead — PostNord team<br>
+          Manager — up to 7 designers
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <span class="footer-text">Michela Monterosso</span>
+  <div id="footer-creature-stage"></div>
+  <span class="footer-text">© 2026</span>
+</footer>
+
+<script src="../projects.js"></script>
+<script src="../script.js"></script>
+<script>injectProjectMeta("project-leadership");</script>
+
+</body>
+</html>
