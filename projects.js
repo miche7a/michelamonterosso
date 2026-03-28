@@ -66,8 +66,6 @@ function injectNextProject(slug) {
   var idx = PROJECTS.findIndex(function(p) { return p.slug === slug; });
   if (idx === -1) return;
   var next = PROJECTS[(idx + 1) % PROJECTS.length];
-  document.addEventListener('DOMContentLoaded', function() {
-    var link = document.querySelector('.proj-nav-link');
-    if (link) link.href = '../' + next.href;
-  });
+  var link = document.querySelector('.proj-nav-link');
+  if (link) link.href = '../' + next.href;
 }
