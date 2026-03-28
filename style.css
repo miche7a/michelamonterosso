@@ -295,7 +295,7 @@ footer {
   border-bottom: var(--divider); text-decoration: none; color: inherit;
   cursor: pointer; position: relative;
 }
-.row-client { font-size: var(--text-sm); letter-spacing: 0.07em; color: var(--dim); }
+.row-client { font-size: var(--text-sm); letter-spacing: 0.01em; color: var(--ink); }
 @media (hover: hover) {
   .index-row::after {
     content: ''; position: absolute;
