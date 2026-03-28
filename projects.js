@@ -50,11 +50,11 @@ var PROJECTS = [
     href:   '#',
   },
   {
-    slug:   'project-08',
-    title:  'On being manager and team lead',
-    type:   'Skills',
-    client: '',
+    slug:   'project-leadership',
+    title:  'On being Manager & Team lead',
+    type:   'Leadership',
+    client: 'Framna',
     year:   2025,
-    href:   '#',
+    href:   'project-leadership/index.html',
   },
 ];
