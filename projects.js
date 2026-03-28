@@ -60,3 +60,12 @@ var PROJECTS = [
     href:   'project-leadership/index.html',
   },
 ];
+
+function injectNextProject(slug) {
+  if (typeof PROJECTS === 'undefined') return;
+  var idx = PROJECTS.findIndex(function(p) { return p.slug === slug; });
+  if (idx === -1) return;
+  var next = PROJECTS[(idx + 1) % PROJECTS.length];
+  var link = document.querySelector('.proj-nav-link');
+  if (link) link.href = '../' + next.href;
+}
