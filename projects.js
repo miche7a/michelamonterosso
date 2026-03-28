@@ -24,12 +24,12 @@ var PROJECTS = [
     href:   'project-postnord/index.html',
   },
    {
-    slug:   'project-partsradet',
-    title:  'A governmental challenge',
-    type:   'Product Design',
-    client: 'Partsrådet',
-    year:   2024,
-    href:   'project-partsradet/index.html',
+    slug:   'project-irish',
+    title:  'Elevating travel at sea',
+    type:   'UX Discovery',
+    client: 'Irish Ferries',
+    year:   2025,
+    href:   'project-irish/index.html',
   },
 
  
@@ -38,17 +38,19 @@ var PROJECTS = [
     title:  'Defining a safety-driven product',
     type:   'UX Discovery',
     client: 'Autoliv',
-    year:   2025,
+    year:   2024,
     href:   'project-autoliv/index.html',
   },
-  {
-    slug:   'project-07',
-    title:  'Elevating travel at sea',
-    type:   'UX Discovery',
-    client: '',
-    year:   2022,
-    href:   '#',
+
+     {
+    slug:   'project-partsradet',
+    title:  'A governmental challenge',
+    type:   'Product Design',
+    client: 'Partsrådet',
+    year:   2019,
+    href:   'project-partsradet/index.html',
   },
+
   {
     slug:   'project-leadership',
     title:  'On being Manager & Team lead',
