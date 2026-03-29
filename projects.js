@@ -55,7 +55,7 @@ var PROJECTS = [
     slug:   'project-leadership',
     title:  'On being Manager & Team lead',
     type:   'Leadership',
-    client: 'Framna',
+    client: '-',
     year:   2025,
     href:   'project-leadership/index.html',
   },
